@@ -138,10 +138,19 @@ add_action( 'widgets_init', 'autismtoday_widgets_init' );
  * Enqueue scripts and styles.
  */
 function autismtoday_scripts() {
+	// fonts
+	wp_enqueue_style('work-sans', 'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap', false);
+	wp_enqueue_style('playfair-display', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap', false);
+
+	// styles
 	wp_enqueue_style( 'autismtoday-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'autismtoday-style', 'rtl', 'replace' );
+	wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/assets/css/styles.min.css');
 
 	wp_enqueue_script( 'autismtoday-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	// custom js
+	wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), false, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
