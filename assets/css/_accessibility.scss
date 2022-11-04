@@ -1,0 +1,21 @@
+@use "breakpoints";
+@use "variables";
+
+.accessibility-content {
+  padding: 1.5rem 1rem;
+  max-width: 93.75rem;
+  margin: 0 auto;
+  p {
+    margin-bottom: 1.5rem;
+  }
+  h3 {
+    text-align: center;
+  }
+  .accessibility-grid-container {
+    @media screen and (min-width: breakpoints.$md) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  }
+}

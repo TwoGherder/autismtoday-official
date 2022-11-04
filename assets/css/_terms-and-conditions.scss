@@ -1,0 +1,16 @@
+@use "breakpoints";
+@use "variables";
+
+.tac-container {
+  padding: 1.5rem 1rem;
+  max-width: 93.75rem;
+  margin: 0 auto;
+  p {
+    &:not(.registration-content) {
+      margin-bottom: 1rem;
+    }
+  }
+  .registration-content {
+    font-weight: bold;
+  }
+}

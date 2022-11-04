@@ -83,6 +83,15 @@ select {
   visibility: hidden;
 }
 
+h1 {
+  text-align: center;
+  line-height: 3rem;
+}
+
+h3 {
+  line-height: 3rem;
+}
+
 h1,
 h2,
 h3,
@@ -90,7 +99,7 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", serif;
-  color: #000000;
+  color: #13344a;
   font-weight: bold;
 }
 
@@ -213,7 +222,6 @@ nav .main-menu {
   list-style-type: none;
   text-align: center;
   font-weight: bold;
-  margin: 0;
 }
 @media screen and (min-width: 48rem) {
   nav .main-menu {
@@ -292,5 +300,36 @@ nav .main-menu li .sub-menu {
 .show nav {
   left: 0;
   z-index: 10;
+}
+
+.accessibility-content {
+  padding: 1.5rem 1rem;
+  max-width: 93.75rem;
+  margin: 0 auto;
+}
+.accessibility-content p {
+  margin-bottom: 1.5rem;
+}
+.accessibility-content h3 {
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .accessibility-content .accessibility-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.tac-container {
+  padding: 1.5rem 1rem;
+  max-width: 93.75rem;
+  margin: 0 auto;
+}
+.tac-container p:not(.registration-content) {
+  margin-bottom: 1rem;
+}
+.tac-container .registration-content {
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */
