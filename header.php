@@ -26,34 +26,54 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'autismtoday' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+		<div class="header-container">
+			<div class="full-logo">
+				<?php if(!has_custom_logo()) { ?>
+					<?php if(is_front_page() && is_home()) : ?>
+						<a rel="home" href="<?php echo esc_url(home_url('/')); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
+					<?php else : ?>
+						<a rel="home" href="<?php echo esc_url(home_url('/')); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
+					<?php endif; ?>
+				<?php } else {
+					the_custom_logo();
+				}
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$autismtoday_description = get_bloginfo( 'description', 'display' );
-			if ( $autismtoday_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $autismtoday_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+			</div>
+			<!-- end of full logo -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'autismtoday' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			<!-- mobile logo -->
+			<div class="header-mobile">
+				<a rel="home" href="<?php echo esc_url(home_url('/')); ?>" itemprop="url">
+					<img src="<?php bloginfo('template_directory'); ?>/assets/img/autism-today-logo-mobile.svg" alt="<?php the_title(); ?>">
+					<span class="sr-only"><?php bloginfo('name'); ?></span>
+				</a>
+
+				<!-- navbar-toggler and donate -->
+				<div class="header-combo">
+					<button class="donate-button">DONATE</button>
+					<div class="toggle-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<!-- end of mobile logo -->
+			</div>
+
+			<!-- navigation -->
+			<nav>
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location'			=>			'main-menu',
+							'menu_class'					=>			'main-menu',
+							'menu_id'							=>			'main-menu',
+							'fallback_cb'					=>			''
+						)
+					)
+				?>
+			</nav>
+		</div>
 	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
