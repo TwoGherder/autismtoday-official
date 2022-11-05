@@ -84,6 +84,7 @@ select {
 }
 
 h1 {
+  margin-top: 1.5rem;
   text-align: center;
   line-height: 3rem;
 }
@@ -331,5 +332,15 @@ nav .main-menu li .sub-menu {
 }
 .tac-container .registration-content {
   font-weight: bold;
+}
+
+.pp-container {
+  padding: 1.5rem 1rem;
+}
+.pp-container p {
+  margin-bottom: 1.5rem;
+}
+.pp-container ul {
+  list-style-type: square;
 }
 /*# sourceMappingURL=styles.css.map */

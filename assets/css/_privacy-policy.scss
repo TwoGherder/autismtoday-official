@@ -1,0 +1,12 @@
+@use "variables";
+@use "breakpoints";
+
+.pp-container {
+  padding: 1.5rem 1rem;
+  p {
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    list-style-type: square;
+  }
+}
