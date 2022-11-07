@@ -229,6 +229,7 @@ nav .main-menu {
     background-color: #ffffff;
     display: flex;
     gap: 0.5rem;
+    border-bottom: 0.125rem solid #13344a;
   }
 }
 nav .main-menu a {
@@ -305,7 +306,7 @@ nav .main-menu li .sub-menu {
 
 .accessibility-content {
   padding: 1.5rem 1rem;
-  max-width: 93.75rem;
+  max-width: 1600px;
   margin: 0 auto;
 }
 .accessibility-content p {
@@ -324,11 +325,11 @@ nav .main-menu li .sub-menu {
 
 .tac-container {
   padding: 1.5rem 1rem;
-  max-width: 93.75rem;
+  max-width: 1600px;
   margin: 0 auto;
 }
 .tac-container p:not(.registration-content) {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .tac-container .registration-content {
   font-weight: bold;
@@ -336,6 +337,8 @@ nav .main-menu li .sub-menu {
 
 .pp-container {
   padding: 1.5rem 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .pp-container p {
   margin-bottom: 1.5rem;

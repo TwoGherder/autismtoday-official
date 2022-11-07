@@ -3,6 +3,8 @@
 
 .pp-container {
   padding: 1.5rem 1rem;
+  max-width: variables.$max-cont-width;
+  margin: 0 auto;
   p {
     margin-bottom: 1.5rem;
   }

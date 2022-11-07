@@ -3,11 +3,11 @@
 
 .tac-container {
   padding: 1.5rem 1rem;
-  max-width: 93.75rem;
+  max-width: variables.$max-cont-width;
   margin: 0 auto;
   p {
     &:not(.registration-content) {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
   }
   .registration-content {
