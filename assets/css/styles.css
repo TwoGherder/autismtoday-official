@@ -128,7 +128,6 @@ footer a:hover {
 }
 
 footer h3 {
-  font-size: clamp(1.125rem, 2.12vw, 1.575rem);
   color: #ffffff;
 }
 
@@ -302,6 +301,76 @@ nav .main-menu li .sub-menu {
 .show nav {
   left: 0;
   z-index: 10;
+}
+
+.newsletter-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/newsletter.jpeg) center center no-repeat;
+  background-size: cover;
+}
+.newsletter-container .newsletter-content {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.newsletter-container .newsletter-content h3 {
+  width: 18.75rem;
+  margin: 0 auto 1.5rem auto;
+}
+@media screen and (min-width: 64rem) {
+  .newsletter-container .newsletter-content h3 {
+    margin: 0;
+  }
+}
+.newsletter-container .newsletter-content p {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 64rem) {
+  .newsletter-container .newsletter-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.newsletter-container .newsletter-content .newsletter-form {
+  background-color: #13344a;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 64rem) {
+  .newsletter-container .newsletter-content .newsletter-form {
+    margin: 0;
+  }
+}
+.newsletter-container .newsletter-content .newsletter-form .newsletter-form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.newsletter-container .newsletter-content .newsletter-form .newsletter-form-control label {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+.newsletter-container .newsletter-content .newsletter-form .newsletter-form-control input {
+  outline: 0;
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 0;
+}
+.newsletter-container .newsletter-content .newsletter-form .newsletter-submit {
+  width: 100%;
+  background-color: #ff6168;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  outline: 0;
+  border: 0;
+  padding: 0.375rem 0;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.newsletter-container .newsletter-content .newsletter-form .newsletter-submit:hover {
+  background-color: #12c0d8;
 }
 
 .accessibility-content {

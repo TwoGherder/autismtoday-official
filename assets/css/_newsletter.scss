@@ -1,0 +1,67 @@
+@use "variables";
+@use "breakpoints";
+
+.newsletter-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/newsletter.jpeg) center center no-repeat;
+  background-size: cover;
+  .newsletter-content {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    h3 {
+      width: 18.75rem;
+      margin: 0 auto 1.5rem auto;
+      @media screen and (min-width: breakpoints.$lg) {
+        margin: 0;
+      }
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    @media screen and (min-width: breakpoints.$lg) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .newsletter-form {
+      background-color: variables.$navy-blue;
+      padding: 1rem;
+      border-radius: variables.$border-radius-sm;
+      max-width: 25rem;
+      margin: 0 auto;
+      @media screen and (min-width: breakpoints.$lg) {
+        margin: 0;
+      }
+      .newsletter-form-control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        label {
+          font-weight: bold;
+          text-align: left;
+          margin-bottom: 0.5rem;
+        }
+        input {
+          outline: 0;
+          padding: 0.375rem 0.625rem;
+          border-radius: variables.$border-radius-sm;
+          border: 0;
+        }
+      }
+      .newsletter-submit {
+        width: 100%;
+        background-color: variables.$bright-red;
+        text-transform: uppercase;
+        border-radius: variables.$border-radius-sm;
+        outline: 0;
+        border: 0;
+        padding: 0.375rem 0;
+        color: variables.$alternate-color;
+        transition: variables.$animation-all;
+        &:hover {
+          background-color: variables.$bright-blue;
+        }
+      }
+    }
+  }
+}
