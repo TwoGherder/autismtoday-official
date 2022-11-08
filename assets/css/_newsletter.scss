@@ -8,9 +8,13 @@
   .newsletter-content {
     padding: 1.5rem 1rem;
     text-align: center;
+    max-width: variables.$max-cont-width;
+    margin: 0 auto;
     h3 {
       width: 18.75rem;
       margin: 0 auto 1.5rem auto;
+      font-family: variables.$content-font;
+      font-size: clamp(1.125rem, 1.0313rem + 0.4688vw, 1.5rem);
       @media screen and (min-width: breakpoints.$lg) {
         margin: 0;
       }
@@ -20,7 +24,7 @@
     }
     @media screen and (min-width: breakpoints.$lg) {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
     }
     .newsletter-form {

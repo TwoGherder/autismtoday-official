@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="newsletter-container">
 			<div class="newsletter-content">
-				<h3>"The best of Autism Today Foundation Canada, straight to your inbox"</h3>
+				<h3>The best of Autism Today Foundation Canada, straight to your inbox</h3>
 				<form action="mailto:twogheder@gmail.com" method="post" enctype="text/plain" class="newsletter-form">
 					<p>
 						Be the first to know about what to watch, exclusive previews, and updates from the Autism Today Foundation Canada
