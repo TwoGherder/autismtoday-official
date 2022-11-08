@@ -1,0 +1,11 @@
+/*  global rules for whole page */
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+/* no bullet list must appear */
+ul {
+	list-style-type: none;
+}

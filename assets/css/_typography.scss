@@ -1,0 +1,18 @@
+@use 'variables';
+
+/* ===== text footer styles ==== */
+.site-footer a {
+	text-decoration: none;
+	&:active,
+	&:visited {
+		color: variables.$alternate-color;
+	}
+	&:hover {
+		text-decoration: underline;
+		color: variables.$light-green;
+		font-weight: variables.$bold-500;
+	}
+	// h3 {
+	//   	font-size: clamp(1.125rem, 2.12vw, 1.575rem);
+	// }
+}
