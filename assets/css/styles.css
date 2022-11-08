@@ -81,9 +81,131 @@ ol {
   padding: 0;
 }
 
-/* no bullet list must appear */
-ul {
-  list-style-type: none;
+/* =============== 3 main pillar cards styles ============= */
+/* === 3 main section === */
+.main-pillars {
+  padding: 1.5rem 1.25rem;
+}
+.main-pillars > h2 {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 64rem) {
+  .main-pillars {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+/* === 3 main pillar cards container === */
+.card-pillar-container {
+  display: grid;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .card-pillar-container {
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 64rem) {
+  .card-pillar-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* === 3 main pillar individual cards === */
+.pillar-card {
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: #7c8383 -5px 11px 12px 1px;
+}
+.pillar-card img {
+  width: 100%;
+  height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 10px 10px 0 0;
+}
+.pillar-card .title-pillar {
+  margin: 1rem 0;
+}
+.pillar-card:nth-child(1n) {
+  background-color: #12c0d8;
+}
+.pillar-card:nth-child(2n) {
+  background-color: #12c028;
+}
+.pillar-card .title-pillar,
+.pillar-card > .pillar-body {
+  padding: 0 1.25rem;
+}
+
+/* === 3 main pillar header card === */
+.pillar-header > img {
+  width: 100%;
+  height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 10px 10px 0 0;
+}
+@media screen and (min-width: 48rem) {
+  .pillar-header > img {
+    height: 16rem;
+  }
+}
+
+/* === 3 main pillar card title === */
+.title-pillar {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.title-pillar img {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* === 3 main pillar card body === */
+.pillar-body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+.pillar-body p {
+  margin-bottom: 1.75rem;
+  height: 3rem;
+  overflow: hidden;
+  flex: 0 1 3rem;
+}
+.pillar-body a {
+  align-self: center;
+  background-color: #13344a;
+  padding: 1rem;
+  border-radius: 3px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+.pillar-body a:hover {
+  background-color: #ff6168;
+  text-decoration: underline;
+}
+@media screen and (min-width: 48rem) {
+  .pillar-body a {
+    margin-bottom: 0;
+    padding: 0.55rem;
+  }
+}
+
+/* === mix classes with different styles === */
+.title-pillar h3,
+.pillar-body a {
+  text-transform: uppercase;
 }
 
 /* ===== text footer styles ==== */
