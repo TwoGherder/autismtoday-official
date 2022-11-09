@@ -22,12 +22,12 @@
 	
 					<div class="newsletter-form-control">
 						<label for="fname">Name:</label>
-						<input type="fname" name="fname" id="fname">
+						<input type="fname" name="fname" id="fname" required>
 					</div>
 	
 					<div class="newsletter-form-control">
 						<label for="email">Email:</label>
-						<input type="email" name="email" id="email">
+						<input type="email" name="email" id="email" required>
 					</div>
 	
 					<input type="submit" name="submit" id="submit" class="newsletter-submit" value="subscribe">

@@ -1,0 +1,56 @@
+@use "variables";
+@use "breakpoints";
+
+.contact-container {
+  .contact-form {
+    padding: 1.5rem 1rem;
+    max-width: variables.$max-cont-width;
+    margin: 0 auto;
+    .contact-form-flex {
+      @media screen and (min-width: breakpoints.$md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .contact-form-control {
+      margin-bottom: 1.5rem;
+      label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      textarea {
+        resize: none;
+        height: 6.25rem;
+        height: 15.625rem;
+      }
+      input,
+      textarea {
+        border: 0.0625rem solid variables.$navy-blue;
+        outline: none;
+        width: 100%;
+        border-radius: variables.$border-radius-sm;
+        padding: 0.375rem 0.625rem;
+      }
+    }
+    .contact-form-submit {
+      text-align: center;
+    }
+    #contact-submit {
+      width: 100%;
+      max-width: 18rem;
+      text-transform: uppercase;
+      border-radius: variables.$border-radius-sm;
+      outline: 0;
+      border: 0;
+      background-color: variables.$navy-blue;
+      transition: variables.$animation-all;
+      padding: 0.625rem 0;
+      color: variables.$alternate-color;
+      &:hover {
+        background-color: variables.$bright-blue;
+      }
+    }
+  }
+}
