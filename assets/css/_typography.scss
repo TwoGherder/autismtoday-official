@@ -38,3 +38,16 @@ footer a:hover {
 footer h3 {
   color: variables.$alternate-color;
 }
+/* ===== text footer styles ==== */
+.site-footer a {
+  text-decoration: none;
+  &:active,
+  &:visited {
+    color: variables.$alternate-color;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: variables.$light-green;
+    font-weight: variables.$bold-500;
+  }
+}
