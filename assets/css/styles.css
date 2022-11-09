@@ -361,6 +361,57 @@ nav .main-menu li .sub-menu {
 .contact-container .contact-form #contact-submit:hover {
   background-color: #12c0d8;
 }
+.contact-container .contact-more-information {
+  background-color: #13344a;
+  color: #ffffff;
+}
+.contact-container .contact-more-information .contact-more-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+.contact-container .contact-more-information .contact-more-container h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.contact-container .contact-more-information .contact-more-container .contact-list {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .contact-container .contact-more-information .contact-more-container .contact-list {
+    text-align: center;
+  }
+}
+.contact-container .contact-more-information .contact-more-container .contact-list > p {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+.contact-container .contact-more-information .contact-more-container .contact-list .contact-email p:nth-child(2), .contact-container .contact-more-information .contact-more-container .contact-list .contact-email p:nth-child(3) {
+  font-weight: bold;
+}
+.contact-container .contact-more-information .contact-more-container .contact-more-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .contact-container .contact-more-information .contact-more-container .contact-more-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.contact-container .contact-more-information .contact-more-container .contact-more-grid .contact-more-card {
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  color: #13344a;
+  text-align: center;
+}
+.contact-container .contact-more-information .contact-more-container .contact-more-grid .contact-more-card p:nth-child(1), .contact-container .contact-more-information .contact-more-container .contact-more-grid .contact-more-card p:nth-child(3) {
+  font-weight: bold;
+}
+.contact-container .contact-more-information .contact-more-container .contact-more-grid .contact-more-card p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 
 .newsletter-container {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/newsletter.jpeg) center center no-repeat;

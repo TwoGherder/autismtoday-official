@@ -53,4 +53,60 @@
       }
     }
   }
+
+  .contact-more-information {
+    background-color: variables.$navy-blue;
+    color: variables.$alternate-color;
+    .contact-more-container {
+      max-width: variables.$max-cont-width;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+      h3 {
+        color: variables.$alternate-color;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .contact-list {
+        margin-bottom: 1.5rem;
+        @media screen and (min-width: breakpoints.$md) {
+          text-align: center;
+        }
+        > p {
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+        }
+        .contact-email {
+          p {
+            &:nth-child(2),
+            &:nth-child(3) {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .contact-more-grid {
+        display: grid;
+        gap: 1rem;
+        @media screen and (min-width: breakpoints.$md) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .contact-more-card {
+          background-color: variables.$alternate-color;
+          border-radius: variables.$border-radius-sm;
+          padding: 1rem;
+          color: variables.$navy-blue;
+          text-align: center;
+          p {
+            &:nth-child(1),
+            &:nth-child(3) {
+              font-weight: bold;
+            }
+            &:not(:last-child) {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
