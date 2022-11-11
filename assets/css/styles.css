@@ -221,10 +221,9 @@ ol {
   font-weight: 500;
 }
 
-/* =============== footer styles below here =============== */
+/* =============== autismtoday footer styles below here =============== */
 .site-footer {
   background-color: #13344a;
-  padding: 1.25rem 1.5rem;
 }
 .site-footer .widget-title {
   margin-bottom: 0.75rem;
@@ -238,6 +237,33 @@ ol {
   }
 }
 
+.autismtoday-footer {
+  padding: 1.25rem 1.5rem;
+  /* ============= links are all grid in screen ========= */
+}
+.autismtoday-footer > .grid-row {
+  margin: 0 auto;
+  display: grid;
+}
+@media screen and (min-width: 48rem) {
+  .autismtoday-footer > .grid-row {
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, auto));
+  }
+}
+@media screen and (min-width: 64rem) {
+  .autismtoday-footer > .grid-row {
+    max-width: 1600px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 80rem) {
+  .autismtoday-footer > .grid-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* =========== top footer ========== */
 .top-footer {
   margin-bottom: 3.25rem;
 }
@@ -255,24 +281,9 @@ ol {
   }
 }
 
+/* =========== mid footer ========== */
 .mid-footer {
   margin-bottom: 2.85rem;
-}
-
-/* ========== links are all flex in screen ============== */
-@media screen and (min-width: 880px) {
-  .site-footer > .flex-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
-  }
-}
-@media screen and (min-width: 64rem) {
-  .site-footer > .flex-row {
-    max-width: 1600px;
-  }
 }
 
 /* =========== bottom footer ========== */
@@ -282,7 +293,7 @@ ol {
   padding: 1rem 0;
 }
 
-/* ==== social media ==== */
+/* =========== social media ========== */
 .soc-med {
   text-align: center;
 }
@@ -293,7 +304,6 @@ ol {
   -moz-column-gap: 0.75rem;
        column-gap: 0.75rem;
 }
-
 .soc-med > ul svg {
   width: 2rem;
   height: 2rem;
@@ -303,9 +313,16 @@ ol {
   height: 3rem;
 }
 
+/* ======= copyright ======== */
 @media screen and (min-width: 64rem) {
   .copyright p {
     font-size: 0.875rem;
   }
+}
+
+/* ======= for hiding the title not SR ===== */
+.mid-col-three h3,
+.mid-col-four h3 {
+  visibility: hidden;
 }
 /*# sourceMappingURL=styles.css.map */
