@@ -135,7 +135,7 @@ ol {
   background-color: #12c0d8;
 }
 .pillar-card:nth-child(2n) {
-  background-color: #12c028;
+  background-color: #6cd898;
 }
 .pillar-card .title-pillar,
 .pillar-card > .pillar-body {
@@ -184,7 +184,7 @@ ol {
 }
 .pillar-body a {
   align-self: center;
-  background-color: #13344a;
+  background-color: #13344b;
   padding: 1rem;
   border-radius: 3px;
   color: #ffffff;
@@ -217,13 +217,14 @@ ol {
 }
 .site-footer a:hover {
   text-decoration: underline;
-  color: #12c028;
+  color: #6cd898;
   font-weight: 500;
 }
 
 /* =============== autismtoday footer styles below here =============== */
 .site-footer {
-  background-color: #13344a;
+  color: #ffffff;
+  background-color: #13344b;
 }
 .site-footer .widget-title {
   margin-bottom: 0.75rem;
