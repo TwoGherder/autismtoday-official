@@ -176,7 +176,7 @@ ol {
   flex-direction: column;
   margin-bottom: 1.25rem;
 }
-.pillar-body p {
+.pillar-body .pillar-card-text {
   margin-bottom: 1.75rem;
   height: 3rem;
   overflow: hidden;
