@@ -132,6 +132,9 @@ foreach ($autismtoday_includes as $file) {
 	require_once $filepath;
 }
 
+// Prevent WP from adding <p> tags on all post types - dont include it, sa akin lang kasi para may reference lang ako. Lol.
+remove_filter('the_content', 'wpautop');
+remove_filter('the_excerpt', 'wpautop');
 
 
 /**
