@@ -130,7 +130,7 @@ footer a:visited {
 
 footer a:hover {
   text-decoration: underline;
-  color: #12c028;
+  color: #6bd999;
   font-weight: 500;
 }
 
@@ -308,6 +308,125 @@ nav .main-menu li .sub-menu {
 .show nav {
   left: 0;
   z-index: 10;
+}
+
+.about-us-container {
+  color: #ffffff;
+}
+.about-us-container .about-us-members h2 {
+  text-align: center;
+}
+.about-us-container .about-us-members .about-us-executives {
+  padding: 3rem 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 40.625rem) {
+  .about-us-container .about-us-members .about-us-executives {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 48rem) {
+  .about-us-container .about-us-members .about-us-executives {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 64rem) {
+  .about-us-container .about-us-members .about-us-executives {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.about-us-container .about-us-members .about-us-executives .about-us-executives-card {
+  width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.about-us-container .about-us-members .about-us-executives .about-us-executives-card img {
+  width: 100%;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+.about-us-container .about-us-members .about-us-executives .about-us-executives-card .exec-card-content {
+  background-color: #13344a;
+  height: 12.5rem;
+  padding: 1rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+.about-us-container .about-us-members .about-us-executives .about-us-executives-card .exec-card-content h3 {
+  color: #ff6168;
+}
+.about-us-container .about-us-members .about-us-advisory {
+  background-color: #13344a;
+  padding: 1.5rem 1rem;
+}
+.about-us-container .about-us-members .about-us-advisory h2 {
+  color: #12c0d8;
+  margin-bottom: 1.5rem;
+}
+.about-us-container .about-us-members .about-us-advisory h3 {
+  color: #6bd999;
+}
+.about-us-container .about-us-members .about-us-advisory .advisory-grid-container {
+  display: grid;
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 40.625rem) {
+  .about-us-container .about-us-members .about-us-advisory .advisory-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 48rem) {
+  .about-us-container .about-us-members .about-us-advisory .advisory-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 64rem) {
+  .about-us-container .about-us-members .about-us-advisory .advisory-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.about-us-container .mission-container {
+  padding: 3rem 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #13344a;
+}
+.about-us-container .mission-container .mission-statement h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.about-us-container .mission-container .mission-objective h2 {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.about-us-container .mission-container .mission-objective .mission-objective-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .about-us-container .mission-container .mission-objective .mission-objective-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.about-us-container .mission-container .other-missions .other-missions-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.about-us-container .mission-container .other-missions .other-missions-grid p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 64rem) {
+  .about-us-container .mission-container .other-missions .other-missions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.about-us-container .mission-container .other-missions .further-objectives p:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 .contact-container .contact-form {

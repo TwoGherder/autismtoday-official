@@ -1,0 +1,121 @@
+@use "variables";
+@use "breakpoints";
+
+.about-us-container {
+  color: variables.$alternate-color;
+  .about-us-members {
+    h2 {
+      text-align: center;
+    }
+    .about-us-executives {
+      padding: 3rem 1rem;
+      max-width: variables.$max-cont-width;
+      margin: 0 auto;
+      text-align: center;
+      display: grid;
+      gap: 1.5rem;
+      @media screen and (min-width: breakpoints.$about-us-cards) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (min-width: breakpoints.$md) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (min-width: breakpoints.$lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .about-us-executives-card {
+        width: 100%;
+        max-width: 25rem;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          border-radius: variables.$border-radius-sm variables.$border-radius-sm
+            0 0;
+        }
+        .exec-card-content {
+          background-color: variables.$navy-blue;
+          height: 12.5rem;
+          padding: 1rem;
+          border-radius: 0 0 variables.$border-radius-sm
+            variables.$border-radius-sm;
+          h3 {
+            color: variables.$bright-red;
+          }
+        }
+      }
+    }
+    .about-us-advisory {
+      background-color: variables.$navy-blue;
+      padding: 1.5rem 1rem;
+      h2 {
+        color: variables.$bright-blue;
+        margin-bottom: 1.5rem;
+      }
+      h3 {
+        color: variables.$light-green;
+      }
+      .advisory-grid-container {
+        display: grid;
+        gap: 2rem;
+        max-width: variables.$max-cont-width;
+        margin: 0 auto;
+        @media screen and (min-width: breakpoints.$about-us-cards) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (min-width: breakpoints.$md) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (min-width: breakpoints.$lg) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+  .mission-container {
+    padding: 3rem 1rem;
+    max-width: variables.$max-cont-width;
+    margin: 0 auto;
+    color: variables.$navy-blue;
+    .mission-statement {
+      h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .mission-objective {
+      h2 {
+        margin: 1.5rem 0;
+        text-align: center;
+      }
+      .mission-objective-grid {
+        display: grid;
+        gap: 1.5rem;
+        @media screen and (min-width: breakpoints.$md) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+    .other-missions {
+      .other-missions-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        p {
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+        }
+        @media screen and (min-width: breakpoints.$lg) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .further-objectives {
+        p {
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
