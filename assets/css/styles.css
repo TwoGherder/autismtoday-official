@@ -105,11 +105,18 @@ ol {
   .card-pillar-container {
     margin: 0 auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 51.25rem;
   }
 }
 @media screen and (min-width: 64rem) {
   .card-pillar-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 85rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .card-pillar-container {
+    max-width: 100rem;
   }
 }
 
@@ -118,6 +125,8 @@ ol {
   border-radius: 10px;
   margin: 0 auto;
   box-shadow: #7c8383 -5px 11px 12px 1px;
+  max-width: 27rem;
+  color: #13344b;
 }
 .pillar-card img {
   width: 100%;
@@ -140,6 +149,16 @@ ol {
 .pillar-card .title-pillar,
 .pillar-card > .pillar-body {
   padding: 0 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .pillar-card {
+    max-width: 25rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .pillar-card {
+    max-width: 100%;
+  }
 }
 
 /* === 3 main pillar header card === */
@@ -177,6 +196,7 @@ ol {
   margin-bottom: 1.25rem;
 }
 .pillar-body .pillar-card-text {
+  font-size: clamp(1rem, 0.7778rem + 1.1111vw, 1.125rem);
   margin-bottom: 1.75rem;
   height: 3rem;
   overflow: hidden;
@@ -242,6 +262,9 @@ ol {
   padding: 1.25rem 1.5rem;
   /* ============= links are all grid in screen ========= */
 }
+.autismtoday-footer h3 {
+  font-size: clamp(1.125rem, 0.4688rem + 1.25vw, 1.25rem);
+}
 .autismtoday-footer > .grid-row {
   margin: 0 auto;
   display: grid;
@@ -286,6 +309,9 @@ ol {
 .mid-footer {
   margin-bottom: 2.85rem;
 }
+.mid-footer a {
+  font-size: clamp(1rem, 0.6591rem + 0.9091vw, 1.125rem);
+}
 
 /* =========== bottom footer ========== */
 .bottom-footer {
@@ -315,10 +341,8 @@ ol {
 }
 
 /* ======= copyright ======== */
-@media screen and (min-width: 64rem) {
-  .copyright p {
-    font-size: 0.875rem;
-  }
+.copyright p {
+  font-size: clamp(0.875rem, 0.6528rem + 1.1111vw, 1rem);
 }
 
 /* ======= for hiding the title not SR ===== */
