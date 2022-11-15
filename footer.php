@@ -22,7 +22,7 @@
 		</div>
 
 		<!-- mid -->
-		<div class="mid-footer flex-row">
+		<div class="mid-footer grid-row">
 			<div class="col mid-col-one">
 				<!-- first widget -->
 				<?php if (is_active_sidebar('mid-footer-col-one')) : ?>
