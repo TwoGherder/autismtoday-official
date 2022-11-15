@@ -36,7 +36,7 @@
 .pillar-card {
 	// height: 31rem;
 	border-radius: 10px;
-	margin: 0 auto;
+	margin: variables.$def-margin;
 	box-shadow: #7c8383 -5px 11px 12px 1px;
 	max-width: 27rem;
 	color: variables.$navy-blue;
@@ -98,12 +98,15 @@
 	flex-direction: column;
 	margin-bottom: 1.25rem;
 	.pillar-card-text {
-		font-size: clamp(1rem, 0.7778rem + 1.1111vw, 1.125rem);
-		margin-bottom: 1.75rem;
-		height: 3rem;
+		/* for hovering, turn of the display and the overflow */
+		display: -webkit-box !important; /* to display the ellipsis, you need to put the display */
+		-webkit-line-clamp: 3; /* number of multilines to be displayed in textbox */
+		-webkit-box-orient: vertical; /* orientation */
+		white-space: normal; /* set to normal, don't go on nowrap */
 		overflow: hidden;
-		// text-overflow: ellipsis;
-		flex: 0 1 3rem;
+		text-overflow: ellipsis;
+		margin-bottom: 1.75rem;
+		flex: 0 1 5rem;
 	}
 	a {
 		align-self: center;
@@ -111,7 +114,7 @@
 		padding: 1rem;
 		border-radius: 3px;
 		color: variables.$alternate-color;
-		text-decoration: none;
+
 		margin-bottom: 1.5rem;
 		&:hover {
 			background-color: variables.$bright-red;
@@ -124,8 +127,62 @@
 	}
 }
 
+/* =============== featured articles styles ============= */
+.featured-articles-section {
+	padding: 1.5rem 1.25rem;
+	> h2 {
+		margin-bottom: 2rem;
+	}
+	@media screen and (min-width: breakpoints.$lg) {
+		max-width: 100rem;
+		margin: variables.$def-margin;
+	}
+}
+
+.row-featured-articles {
+	margin: variables.$def-margin;
+	@media screen and (min-width: breakpoints.$md) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.75rem;
+	}
+	.articles-card {
+		margin: variables.$def-margin;
+		header > img {
+			height: 18rem;
+			object-fit: cover;
+			object-position: top;
+			box-shadow: variables.$navy-blue -5px 7px 12px -2px;
+			border-radius: 10px 10px 10px 10px;
+		}
+
+		@media screen and (min-width: breakpoints.$md) {
+			flex: 1 1 25rem;
+		}
+	}
+
+	.article-body {
+		margin-top: 1.5rem;
+	}
+
+	.article-title {
+		margin-bottom: 1rem;
+		> a {
+			color: variables.$navy-blue;
+			&:hover {
+				color: variables.$bright-red;
+			}
+		}
+	}
+}
+
 /* === mix classes with different styles === */
 .title-pillar h3,
 .pillar-body a {
 	text-transform: uppercase;
+}
+
+.pillar-card-text,
+.article-excerpt {
+	font-size: clamp(1rem, 0.7778rem + 1.1111vw, 1.125rem);
 }

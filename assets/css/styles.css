@@ -81,6 +81,10 @@ ol {
   padding: 0;
 }
 
+section a {
+  text-decoration: none;
+}
+
 /* =============== 3 main pillar cards styles ============= */
 /* === 3 main section === */
 .main-pillars {
@@ -196,11 +200,15 @@ ol {
   margin-bottom: 1.25rem;
 }
 .pillar-body .pillar-card-text {
-  font-size: clamp(1rem, 0.7778rem + 1.1111vw, 1.125rem);
-  margin-bottom: 1.75rem;
-  height: 3rem;
+  /* for hovering, turn of the display and the overflow */
+  display: -webkit-box !important; /* to display the ellipsis, you need to put the display */
+  -webkit-line-clamp: 3; /* number of multilines to be displayed in textbox */
+  -webkit-box-orient: vertical; /* orientation */
+  white-space: normal; /* set to normal, don't go on nowrap */
   overflow: hidden;
-  flex: 0 1 3rem;
+  text-overflow: ellipsis;
+  margin-bottom: 1.75rem;
+  flex: 0 1 5rem;
 }
 .pillar-body a {
   align-self: center;
@@ -208,7 +216,6 @@ ol {
   padding: 1rem;
   border-radius: 3px;
   color: #ffffff;
-  text-decoration: none;
   margin-bottom: 1.5rem;
 }
 .pillar-body a:hover {
@@ -222,10 +229,69 @@ ol {
   }
 }
 
+/* =============== featured articles styles ============= */
+.featured-articles-section {
+  padding: 1.5rem 1.25rem;
+}
+.featured-articles-section > h2 {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 64rem) {
+  .featured-articles-section {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+.row-featured-articles {
+  margin: 0 auto;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  }
+}
+.row-featured-articles .articles-card {
+  margin: 0 auto;
+}
+.row-featured-articles .articles-card header > img {
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: #13344b -5px 7px 12px -2px;
+  border-radius: 10px 10px 10px 10px;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles .articles-card {
+    flex: 1 1 25rem;
+  }
+}
+.row-featured-articles .article-body {
+  margin-top: 1.5rem;
+}
+.row-featured-articles .article-title {
+  margin-bottom: 1rem;
+}
+.row-featured-articles .article-title > a {
+  color: #13344b;
+}
+.row-featured-articles .article-title > a:hover {
+  color: #ff6168;
+}
+
 /* === mix classes with different styles === */
 .title-pillar h3,
 .pillar-body a {
   text-transform: uppercase;
+}
+
+.pillar-card-text,
+.article-excerpt {
+  font-size: clamp(1rem, 0.7778rem + 1.1111vw, 1.125rem);
 }
 
 /* ===== text footer styles ==== */
@@ -239,6 +305,9 @@ ol {
   text-decoration: underline;
   color: #6cd898;
   font-weight: 500;
+}
+.site-footer a .autismtoday-footer h3 {
+  font-size: clamp(1.125rem, 0.4688rem + 1.25vw, 1.25rem);
 }
 
 /* =============== autismtoday footer styles below here =============== */
