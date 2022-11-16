@@ -90,6 +90,9 @@
 		width: 4rem;
 		height: 4rem;
 	}
+	h3 {
+		line-height: 2rem;
+	}
 }
 
 /* === 3 main pillar card body === */
@@ -98,6 +101,7 @@
 	flex-direction: column;
 	margin-bottom: 1.25rem;
 	.pillar-card-text {
+		// don't delete para sa ellipsis style ng card, haha
 		/* for hovering, turn of the display and the overflow */
 		display: -webkit-box !important; /* to display the ellipsis, you need to put the display */
 		-webkit-line-clamp: 3; /* number of multilines to be displayed in textbox */

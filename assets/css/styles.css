@@ -192,6 +192,9 @@ section a {
   width: 4rem;
   height: 4rem;
 }
+.title-pillar h3 {
+  line-height: 2rem;
+}
 
 /* === 3 main pillar card body === */
 .pillar-body {
