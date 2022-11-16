@@ -1,0 +1,15 @@
+@use "variables";
+@use "breakpoints";
+
+.our-partners-container {
+  max-width: variables.$max-cont-width;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  .our-partners-group {
+    display: grid;
+    justify-content: center;
+    @media screen and (min-width: breakpoints.$md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

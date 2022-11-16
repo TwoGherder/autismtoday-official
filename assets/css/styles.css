@@ -411,12 +411,13 @@ nav .main-menu li .sub-menu {
 
 .about-us-container {
   color: #ffffff;
+  padding: 3rem 0;
 }
 .about-us-container .about-us-members h2 {
   text-align: center;
 }
 .about-us-container .about-us-members .about-us-executives {
-  padding: 3rem 1rem;
+  padding: 1.5rem 1rem;
   max-width: 1600px;
   margin: 0 auto;
   text-align: center;
@@ -528,8 +529,23 @@ nav .main-menu li .sub-menu {
   margin-bottom: 1.5rem;
 }
 
+.our-partners-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+.our-partners-container .our-partners-group {
+  display: grid;
+  justify-content: center;
+}
+@media screen and (min-width: 48rem) {
+  .our-partners-container .our-partners-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .contact-container .contact-form {
-  padding: 1.5rem 1rem;
+  padding: 3rem 1rem;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -706,7 +722,7 @@ nav .main-menu li .sub-menu {
 }
 
 .accessibility-content {
-  padding: 1.5rem 1rem;
+  padding: 3rem 1rem;
   max-width: 1600px;
   margin: 0 auto;
 }

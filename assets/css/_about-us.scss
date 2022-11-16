@@ -3,12 +3,13 @@
 
 .about-us-container {
   color: variables.$alternate-color;
+  padding: 3rem 0;
   .about-us-members {
     h2 {
       text-align: center;
     }
     .about-us-executives {
-      padding: 3rem 1rem;
+      padding: 1.5rem 1rem;
       max-width: variables.$max-cont-width;
       margin: 0 auto;
       text-align: center;
