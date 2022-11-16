@@ -92,6 +92,7 @@
 	}
 	h3 {
 		line-height: 2rem;
+		font-family: 'Work Sans', sans-serif;
 	}
 }
 
@@ -138,7 +139,6 @@
 		margin-bottom: 2rem;
 	}
 	@media screen and (min-width: breakpoints.$lg) {
-		max-width: 100rem;
 		margin: variables.$def-margin;
 	}
 }
@@ -151,7 +151,7 @@
 		gap: 1.75rem;
 	}
 	.articles-card {
-		margin: variables.$def-margin;
+		margin: 1.5rem 0;
 		header > img {
 			height: 18rem;
 			object-fit: cover;
@@ -159,9 +159,13 @@
 			box-shadow: variables.$navy-blue -5px 7px 12px -2px;
 			border-radius: 10px 10px 10px 10px;
 		}
+		&:last-of-type {
+			margin: 0;
+		}
 
 		@media screen and (min-width: breakpoints.$md) {
 			flex: 1 1 25rem;
+			margin: 0;
 		}
 	}
 
