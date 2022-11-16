@@ -321,11 +321,6 @@ section a {
 .site-footer ul {
   line-height: 1.75;
 }
-@media screen and (min-width: 64rem) {
-  .site-footer {
-    padding: 5.25rem 10rem;
-  }
-}
 
 .autismtoday-footer {
   padding: 1.25rem 1.5rem;
@@ -333,6 +328,11 @@ section a {
 }
 .autismtoday-footer h3 {
   font-size: clamp(1.125rem, 0.4688rem + 1.25vw, 1.25rem);
+}
+@media screen and (min-width: 64rem) {
+  .autismtoday-footer {
+    padding: 5.25rem 10rem;
+  }
 }
 .autismtoday-footer > .grid-row {
   margin: 0 auto;
