@@ -13,4 +13,12 @@ h2 {
 h3 {
   line-height: 3rem;
   font-size: clamp(1.125rem, 1.0313rem + 0.4688vw, 1.5rem);
+  /*  global rules for whole page */
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
