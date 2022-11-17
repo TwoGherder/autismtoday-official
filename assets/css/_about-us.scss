@@ -14,7 +14,7 @@
       margin: 0 auto;
       text-align: center;
       display: grid;
-      gap: 1.5rem;
+      gap: 2rem;
       @media screen and (min-width: breakpoints.$about-us-cards) {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -35,12 +35,12 @@
         }
         .exec-card-content {
           background-color: variables.$navy-blue;
-          height: 12.5rem;
           padding: 1rem;
           border-radius: 0 0 variables.$border-radius-sm
             variables.$border-radius-sm;
           h3 {
             color: variables.$bright-red;
+            margin-bottom: 1.5rem;
           }
         }
       }
@@ -90,8 +90,8 @@
       }
       .mission-objective-grid {
         display: grid;
-        gap: 1.5rem;
-        @media screen and (min-width: breakpoints.$md) {
+        gap: 2rem;
+        @media screen and (min-width: breakpoints.$lg) {
           grid-template-columns: repeat(3, 1fr);
         }
       }
@@ -99,7 +99,7 @@
     .other-missions {
       .other-missions-grid {
         display: grid;
-        gap: 1.5rem;
+        gap: 2rem;
         margin-bottom: 1.5rem;
         p {
           &:not(:last-child) {

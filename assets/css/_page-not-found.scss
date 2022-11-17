@@ -1,0 +1,70 @@
+@use "variables";
+@use "breakpoints";
+
+.error-404-container {
+  max-width: variables.$max-cont-width;
+  margin: 0 auto;
+  padding: 6rem 0;
+  .page-header {
+    .error-404-title {
+      padding: 0 1rem;
+    }
+  }
+  .error-404-content {
+    padding: 3rem 1rem;
+    text-align: center;
+    p {
+      font-size: clamp(1rem, 0.9375rem + 0.3125vw, 1.25rem);
+      width: 100%;
+      max-width: 28.125rem;
+      margin: 0 auto 1.5rem auto;
+    }
+    .search-form {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      label {
+        .search-field {
+          padding: 0.375rem 0.625rem;
+          border-radius: variables.$border-radius-sm 0 0
+            variables.$border-radius-sm;
+          border: 0.0625rem solid variables.$navy-blue;
+          outline: none;
+          width: 100%;
+          max-width: 31.25rem;
+        }
+      }
+      .search-submit {
+        background-color: variables.$navy-blue;
+        border-radius: 0 variables.$border-radius-sm variables.$border-radius-sm
+          0;
+        color: variables.$alternate-color;
+        padding: 0.375rem 0.625rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+    }
+    .error-404-home-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .error-404-home {
+        text-decoration: none;
+        background-color: variables.$navy-blue;
+        padding: 0.375rem 1rem;
+        text-transform: uppercase;
+        color: variables.$alternate-color;
+        display: block;
+        border-radius: variables.$border-radius-sm;
+        transition: variables.$animation-all;
+        width: 100%;
+        max-width: 9.375rem;
+        &:hover {
+          background-color: variables.$bright-blue;
+        }
+      }
+    }
+  }
+}

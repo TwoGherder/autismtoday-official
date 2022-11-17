@@ -12,10 +12,17 @@
     text-align: center;
   }
   .accessibility-grid-container {
-    @media screen and (min-width: breakpoints.$md) {
+    @media screen and (min-width: breakpoints.$lg) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
+      gap: 2rem;
+    }
+    .accessibility-exceptions {
+      @media screen and (min-width: breakpoints.$lg) {
+        border-left: 0.125rem solid variables.$navy-blue;
+        border-right: 0.125rem solid variables.$navy-blue;
+        padding: 0 2rem;
+      }
     }
   }
 }
