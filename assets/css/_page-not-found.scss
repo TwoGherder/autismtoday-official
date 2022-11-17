@@ -44,6 +44,10 @@
         border: none;
         cursor: pointer;
         text-transform: uppercase;
+        transition: variables.$animation-all;
+        &:hover {
+          background-color: variables.$bright-blue;
+        }
       }
     }
     .error-404-home-container {

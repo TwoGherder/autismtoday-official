@@ -771,6 +771,89 @@ nav .main-menu li .sub-menu {
   list-style-type: square;
 }
 
+.search-content-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.search-content-container:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.search-content-container .entry-title a {
+  text-transform: uppercase;
+  color: #ff6168;
+}
+
+.search-header-container {
+  padding: 0 1rem;
+}
+.search-header-container .search-form-container .search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.search-header-container .search-form-container .search-form label .search-field {
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+  border: 0.0625rem solid #13344a;
+  outline: none;
+  width: 100%;
+}
+.search-header-container .search-form-container .search-form .search-submit {
+  background-color: #13344a;
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #ffffff;
+  padding: 0.375rem 0.625rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.search-header-container .search-form-container .search-form .search-submit:hover {
+  background-color: #12c0d8;
+}
+
+.search-results-container {
+  padding: 3rem 1rem;
+}
+
+.content-none-container {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 6rem 1rem;
+}
+.content-none-container p {
+  text-align: center;
+  font-size: clamp(1rem, 0.9375rem + 0.3125vw, 1.25rem);
+  margin-bottom: 3rem;
+}
+.content-none-container .search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.content-none-container .search-form label .search-field {
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+  border: 0.0625rem solid #13344a;
+  outline: none;
+  width: 100%;
+}
+.content-none-container .search-form .search-submit {
+  background-color: #13344a;
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #ffffff;
+  padding: 0.375rem 0.625rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.content-none-container .search-form .search-submit:hover {
+  background-color: #12c0d8;
+}
+
 .error-404-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -811,6 +894,10 @@ nav .main-menu li .sub-menu {
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.error-404-container .error-404-content .search-form .search-submit:hover {
+  background-color: #12c0d8;
 }
 .error-404-container .error-404-content .error-404-home-container {
   display: flex;
