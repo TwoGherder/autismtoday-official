@@ -12,29 +12,29 @@ This is the official repository of our Autism Today redesign project for our DMI
 
 - [ ] Optimizing Images and Videos
 - [x] Setting Up SASS
-- [ ] Adding custom JS and CSS paths
+- [x] Adding custom JS and CSS paths
 
 ### **Main**
 
 - [ ] Header Content
-- [ ] Footer Content
+- [x] Footer Content
 - [ ] Landing Page
 - [ ] Autism Today Channel Page
 - [ ] ARTS Network Page
-- [ ] Learning & Education Division Page
-- [ ] Our Partners Page
-- [ ] About Us Page
-- [ ] Contact Us page
-- [ ] Functional Search
+- [x] Learning & Education Division Page
+- [x] Our Partners Page
+- [x] About Us Page
+- [x] Contact Us page
+- [x] Functional Search
 - [ ] WooCommerce Unlock on Pay Contents
-- [ ] Custom Video Player for Content
+- [x] Custom Video Player for Content
+- [x] 404 Page
 - [ ] Google Ad Grants (If Possible)
 
 ### **Security**
 
 - [x] Relocated the admin panel
 - [x] Limited login attempts to prevent bot attacks
-- [ ] Better plugin for everything (MalCare)
 
 ### **SEO**
 
