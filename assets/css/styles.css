@@ -100,6 +100,11 @@ h3 {
   font-size: clamp(1.125rem, 1.0313rem + 0.4688vw, 1.5rem);
 }
 
+p,
+li {
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+}
+
 h1,
 h2,
 h3,
@@ -151,6 +156,11 @@ footer h3 {
 .header-container .custom-logo-link {
     display: block;
   }
+}
+.header-container .full-logo img,
+.header-container .custom-logo-link img {
+  width: 70%;
+  margin: 0 auto;
 }
 @media screen and (min-width: 48rem) {
   .header-container .full-logo img,
@@ -224,32 +234,32 @@ nav {
     position: static;
   }
 }
+@media screen and (min-width: 48rem) {
+  nav .menu-main-menu-container {
+    background-color: #ffffff;
+    border-bottom: 0.125rem solid #13344a;
+  }
+}
 nav .main-menu {
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 48rem) {
   nav .main-menu {
     background-color: #ffffff;
     display: flex;
     gap: 0.5rem;
-    border-bottom: 0.125rem solid #13344a;
   }
 }
 nav .main-menu a {
   display: block;
   color: #ffffff;
   text-decoration: none;
-}
-nav .main-menu li:last-child > a {
-  display: none;
-}
-@media screen and (min-width: 48rem) {
-  nav .main-menu li:last-child > a {
-    display: block;
-  }
 }
 nav .main-menu li a {
   padding: 1rem;
@@ -264,35 +274,29 @@ nav .main-menu li a:hover {
   background-color: #ffffff;
   color: #13344a;
 }
-nav .main-menu li .sub-menu {
-  padding: 0;
-  position: static;
+nav .main-menu .nav-search {
+  margin-left: auto;
+}
+nav .main-menu .donate-button-container {
+  display: none;
 }
 @media screen and (min-width: 48rem) {
-  nav .main-menu li:last-child .sub-menu {
-    display: none;
+  nav .main-menu .donate-button-container {
+    display: flex;
+    align-items: center;
   }
-  nav .main-menu li:last-child .sub-menu ul {
-    display: block;
-    margin: 0.625rem;
-  }
-  nav .main-menu li:last-child:hover .sub-menu {
-    display: block;
-    position: absolute;
-    background-color: #13344a;
-    padding: 1rem;
-    list-style-type: none;
-    right: 50;
-    border-radius: 0.25rem;
-  }
-  nav .main-menu li:last-child:hover .sub-menu li a {
-    display: block;
-    padding: 1rem 1.125rem;
-    color: #ffffff;
-  }
-  nav .main-menu li:last-child:hover .sub-menu li a:hover {
-    color: #13344a;
-  }
+}
+nav .main-menu .donate-button-container a {
+  background-color: #ff6168;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 0.875rem;
+  transition: all 0.3s ease-in-out;
+}
+nav .main-menu .donate-button-container a:hover {
+  background-color: #12c0d8;
 }
 
 .show .toggle-icon span:nth-child(2) {
@@ -308,6 +312,34 @@ nav .main-menu li .sub-menu {
 .show nav {
   left: 0;
   z-index: 10;
+}
+
+.searchwp-modal-form__content .search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.searchwp-modal-form__content .search-form label .search-field {
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+  border: 0.0625rem solid #13344a;
+  outline: none;
+  width: 100%;
+  max-width: 31.25rem;
+}
+.searchwp-modal-form__content .search-form .search-submit {
+  background-color: #13344a;
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #ffffff;
+  padding: 0.375rem 0.625rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.searchwp-modal-form__content .search-form .search-submit:hover {
+  background-color: #12c0d8;
 }
 
 .led-container {
@@ -854,30 +886,36 @@ nav .main-menu li .sub-menu {
   background-color: #12c0d8;
 }
 
-.error-404-container {
+.error-404-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/autismtoday/wp-content/uploads/2022/11/autism-today-pattern-scaled.webp) center center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+.error-404-bg .error-404-container {
   max-width: 1600px;
   margin: 0 auto;
   padding: 6rem 0;
 }
-.error-404-container .page-header .error-404-title {
+.error-404-bg .error-404-container .page-header .error-404-title {
   padding: 0 1rem;
+  color: #ffffff;
 }
-.error-404-container .error-404-content {
+.error-404-bg .error-404-container .error-404-content {
   padding: 3rem 1rem;
   text-align: center;
 }
-.error-404-container .error-404-content p {
+.error-404-bg .error-404-container .error-404-content p {
   font-size: clamp(1rem, 0.9375rem + 0.3125vw, 1.25rem);
   width: 100%;
   max-width: 28.125rem;
   margin: 0 auto 1.5rem auto;
 }
-.error-404-container .error-404-content .search-form {
+.error-404-bg .error-404-container .error-404-content .search-form {
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
 }
-.error-404-container .error-404-content .search-form label .search-field {
+.error-404-bg .error-404-container .error-404-content .search-form label .search-field {
   padding: 0.375rem 0.625rem;
   border-radius: 0.25rem 0 0 0.25rem;
   border: 0.0625rem solid #13344a;
@@ -885,7 +923,7 @@ nav .main-menu li .sub-menu {
   width: 100%;
   max-width: 31.25rem;
 }
-.error-404-container .error-404-content .search-form .search-submit {
+.error-404-bg .error-404-container .error-404-content .search-form .search-submit {
   background-color: #13344a;
   border-radius: 0 0.25rem 0.25rem 0;
   color: #ffffff;
@@ -896,15 +934,15 @@ nav .main-menu li .sub-menu {
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
-.error-404-container .error-404-content .search-form .search-submit:hover {
+.error-404-bg .error-404-container .error-404-content .search-form .search-submit:hover {
   background-color: #12c0d8;
 }
-.error-404-container .error-404-content .error-404-home-container {
+.error-404-bg .error-404-container .error-404-content .error-404-home-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.error-404-container .error-404-content .error-404-home-container .error-404-home {
+.error-404-bg .error-404-container .error-404-content .error-404-home-container .error-404-home {
   text-decoration: none;
   background-color: #13344a;
   padding: 0.375rem 1rem;
@@ -916,7 +954,7 @@ nav .main-menu li .sub-menu {
   width: 100%;
   max-width: 9.375rem;
 }
-.error-404-container .error-404-content .error-404-home-container .error-404-home:hover {
+.error-404-bg .error-404-container .error-404-content .error-404-home-container .error-404-home:hover {
   background-color: #12c0d8;
 }
 /*# sourceMappingURL=styles.css.map */

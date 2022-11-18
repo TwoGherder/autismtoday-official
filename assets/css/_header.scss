@@ -14,6 +14,8 @@
     }
     display: none;
     img {
+      width: 70%;
+      margin: 0 auto;
       @media screen and (min-width: breakpoints.$md) {
         height: 100%;
       }
@@ -80,29 +82,31 @@ nav {
   position: absolute;
   left: -100%;
   transition: variables.$animation-all;
+  .menu-main-menu-container {
+    @media screen and (min-width: breakpoints.$md) {
+      background-color: variables.$alternate-color;
+      border-bottom: 0.125rem solid variables.$navy-blue;
+    }
+  }
   .main-menu {
+    max-width: variables.$max-cont-width;
+    margin: 0 auto;
     @media screen and (min-width: breakpoints.$md) {
       background-color: variables.$alternate-color;
       display: flex;
       gap: 0.5rem;
-      border-bottom: 0.125rem solid variables.$navy-blue;
     }
     padding: 0;
     list-style-type: none;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0;
     a {
       display: block;
       color: variables.$alternate-color;
       text-decoration: none;
     }
     li {
-      &:last-child > a {
-        @media screen and (min-width: breakpoints.$md) {
-          display: block;
-        }
-        display: none;
-      }
       a {
         padding: 1rem;
         transition: variables.$animation-all;
@@ -114,38 +118,26 @@ nav {
           color: variables.$navy-blue;
         }
       }
-      .sub-menu {
-        padding: 0;
-        position: static;
-      }
+    }
+    .nav-search {
+      margin-left: auto;
+    }
+    .donate-button-container {
+      display: none;
       @media screen and (min-width: breakpoints.$md) {
-        &:last-child {
-          .sub-menu {
-            display: none;
-            ul {
-              display: block;
-              margin: 0.625rem;
-            }
-          }
-          &:hover .sub-menu {
-            display: block;
-            position: absolute;
-            background-color: variables.$navy-blue;
-            padding: 1rem;
-            list-style-type: none;
-            right: 50;
-            border-radius: variables.$border-radius-sm;
-            li {
-              a {
-                display: block;
-                padding: 1rem 1.125rem;
-                color: variables.$alternate-color;
-                &:hover {
-                  color: variables.$navy-blue;
-                }
-              }
-            }
-          }
+        display: flex;
+        align-items: center;
+      }
+      a {
+        background-color: variables.$bright-red;
+        color: variables.$alternate-color;
+        border: none;
+        border-radius: variables.$border-radius-sm;
+        cursor: pointer;
+        padding: 0.5rem 0.875rem;
+        transition: variables.$animation-all;
+        &:hover {
+          background-color: variables.$bright-blue;
         }
       }
     }
@@ -170,4 +162,37 @@ nav {
 .show nav {
   left: 0;
   z-index: 10;
+}
+
+.searchwp-modal-form__content {
+  .search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    label {
+      .search-field {
+        padding: 0.375rem 0.625rem;
+        border-radius: variables.$border-radius-sm 0 0
+          variables.$border-radius-sm;
+        border: 0.0625rem solid variables.$navy-blue;
+        outline: none;
+        width: 100%;
+        max-width: 31.25rem;
+      }
+    }
+    .search-submit {
+      background-color: variables.$navy-blue;
+      border-radius: 0 variables.$border-radius-sm variables.$border-radius-sm 0;
+      color: variables.$alternate-color;
+      padding: 0.375rem 0.625rem;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: variables.$animation-all;
+      &:hover {
+        background-color: variables.$bright-blue;
+      }
+    }
+  }
 }
