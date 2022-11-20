@@ -89,6 +89,37 @@ section a {
   text-decoration: none;
 }
 
+/* ======== single blog entry styles ============== */
+.wp-image-108 {
+  float: left;
+  margin-right: 1.25rem;
+}
+
+.wp-image-115 {
+  margin-bottom: 1.25rem;
+}
+
+.quote {
+  font-style: italic;
+  margin: 1rem 0 1.5rem;
+}
+
+.service-dog-li:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
+.service-dog-li::before {
+  content: "";
+  display: inline-block;
+  border-left: 1px solid #13344a;
+  width: 12px;
+  background-color: #13344a;
+  height: 3px;
+  position: relative;
+  bottom: 3px;
+  margin-right: 0.25rem;
+}
+
 /* =============== 3 main pillar cards styles ============= */
 /* === 3 main section === */
 .main-pillars {
@@ -303,6 +334,64 @@ section a {
 .pillar-card-text,
 .article-excerpt {
   font-size: clamp(1rem, 0.7778rem + 1.1111vw, 1.125rem);
+}
+
+/* =============== channel styles ============= */
+.channel-section {
+  padding: 1.5rem 1.25rem;
+}
+.channel-section > h2 {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 64rem) {
+  .channel-section {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+.row-channel-cards {
+  margin: 0 auto;
+}
+@media screen and (min-width: 48rem) {
+  .row-channel-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  }
+}
+.row-channel-cards .channel-card {
+  margin: 1.5rem 0;
+}
+.row-channel-cards .channel-card header > img {
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: #ff6168 -5px 7px 12px -2px;
+  border-radius: 10px 10px 10px 10px;
+}
+.row-channel-cards .channel-card:last-of-type {
+  margin: 0;
+}
+@media screen and (min-width: 48rem) {
+  .row-channel-cards .channel-card {
+    flex: 1 1 25rem;
+    margin: 0;
+  }
+}
+.row-channel-cards .channel-body {
+  margin-top: 1.5rem;
+}
+.row-channel-cards .channel-title {
+  margin-bottom: 1rem;
+}
+.row-channel-cards .channel-title > a {
+  color: #13344b;
+}
+.row-channel-cards .channel-title > a:hover {
+  color: #ff6168;
 }
 
 /* ===== text footer styles ==== */

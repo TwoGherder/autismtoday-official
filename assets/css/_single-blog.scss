@@ -1,0 +1,29 @@
+/* ======== single blog entry styles ============== */
+
+.wp-image-108 {
+	float: left;
+	margin-right: 1.25rem;
+}
+.wp-image-115 {
+	margin-bottom: 1.25rem;
+}
+.quote {
+	font-style: italic;
+	margin: 1rem 0 1.5rem;
+}
+
+.service-dog-li:last-of-type {
+	margin-bottom: 2.5rem;
+}
+
+.service-dog-li::before {
+	content: '';
+	display: inline-block;
+	border-left: 1px solid #13344a;
+	width: 12px;
+	background-color: #13344a;
+	height: 3px;
+	position: relative;
+	bottom: 3px;
+	margin-right: 0.25rem;
+}
