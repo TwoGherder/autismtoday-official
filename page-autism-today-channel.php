@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package testingarea
+ * @package autismtoday
  */
 get_header();
 ?>
@@ -24,16 +24,16 @@ $channel_query = new WP_Query($args);
 
 
 <section class="channel-section">
-  <!-- <h2 class="services-heading">
+  <!-- <h1 class="services-heading">
         <?php // the_field('services_heading');
         ?>
-      </h2> -->
+      </h1> -->
 
   <!-- card container  -->
   <h2>
     <?php if (has_category()) {
       //display the category
-      the_category();
+      get_the_category();
     } ?>
   </h2>
   <div class="row-channel-cards">

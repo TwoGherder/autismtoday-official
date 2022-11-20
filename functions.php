@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package autismtodayofficial
+ * @package autismtoday
  */
 
 if (!defined('_S_VERSION')) {

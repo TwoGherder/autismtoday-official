@@ -3,7 +3,7 @@
 /***
  * The template for displaying the custom home page.
  *
- * @package autismtodayofficial
+ * @package autismtoday
  * @since 1.0.0
  */
 //display header
