@@ -24,10 +24,10 @@ $articles_query = new WP_Query($args);
 
 
 <section class="featured-articles-section">
-  <h2 class="articles-heading">
+  <h1 class="articles-heading">
     <?php the_field('featured_articles_heading');
     ?>
-  </h2>
+  </h1>
   <!-- card container  -->
   <div class="row-featured-articles">
     <!-- loop throughout services content -->
@@ -43,7 +43,7 @@ $articles_query = new WP_Query($args);
           </header>
           <div class="article-body">
             <div class="article-title">
-              <a href="<?php the_permalink(); ?>"><?php the_title('<h3>', '</h3>') ?></a>
+              <a href="<?php the_permalink(); ?>"><?php the_title('<h2>', '</h2>') ?></a>
             </div>
             <p class="article-excerpt">
               <?php the_excerpt() ?>
