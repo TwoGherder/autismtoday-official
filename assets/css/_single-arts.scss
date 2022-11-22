@@ -1,0 +1,135 @@
+@use 'variables';
+@use 'breakpoints';
+
+/* ====== single arts blog styles ====== */
+.single-arts-content {
+	margin: variables.$def-margin;
+	padding: 32px;
+	max-width: 1600px;
+	> .single-arts-title {
+		position: absolute;
+		visibility: hidden;
+	}
+	.content-column {
+		margin-bottom: 48px;
+		@media screen and (min-width: breakpoints.$md) {
+			display: grid;
+			grid-template-areas: 'media text-content';
+			column-gap: 68px;
+			margin-bottom: 36px;
+		}
+		> div:first-of-type {
+			grid-area: media;
+		}
+		> div:last-of-type {
+			grid-area: text-content;
+		}
+	}
+	a:hover,
+	h2 {
+		color: variables.$bright-blue;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	h3 {
+		color: variables.$navy-blue;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 1.25rem;
+		// min-width: 50ch;
+		// max-width: 75ch;
+	}
+	span {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	img,
+	.video-channel {
+		@media screen and (min-width: breakpoints.$md) {
+			min-width: 26.875rem;
+			max-width: 31.875rem;
+		}
+	}
+	.channel-first-image,
+	.video-channel {
+		margin-bottom: 28px;
+		@media screen and (min-width: breakpoints.$md) {
+			margin-bottom: 0;
+		}
+	}
+
+	.video-channels {
+		max-width: 56.25rem;
+		> div {
+			margin-bottom: 2rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/* just for Michael Tanzer styling */
+	.michael-media {
+		margin-top: 3.25rem;
+		> div {
+			margin-bottom: 2rem;
+			&:last-of-type {
+				margin-bottom: 0;
+				display: inline-block;
+			}
+			.michaelism {
+				width: calc(15rem + 2vw);
+			}
+			.michael-podcast {
+				border-radius: 12px;
+				min-width: 16.25rem;
+				max-width: 42.5rem;
+			}
+		}
+	}
+
+	/* for Sky Canyon styling */
+	.sky-canyon-content {
+		column-gap: 3.25rem;
+	}
+
+	.sky-img {
+		width: 16rem;
+		max-width: 20rem;
+	}
+	.sky-podcast {
+		> a {
+			display: block;
+			padding: 0.75rem 1rem;
+			margin-bottom: 2.5rem;
+			background-color: variables.$navy-blue;
+			color: white;
+			font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+			font-weight: variables.$bold-500;
+
+			&:hover {
+				text-decoration: underline;
+				background-color: variables.$bright-blue;
+			}
+
+			@media screen and (min-width: breakpoints.$sm) {
+				width: calc(12rem + 3vw);
+				max-width: 13.75rem;
+			}
+		}
+		> iframe {
+			border-radius: 12px;
+			height: 12.5rem;
+			width: 29rem;
+			@media screen and (min-width: breakpoints.$md) {
+				width: 30.625rem;
+				height: 17.5rem;
+			}
+		}
+	}
+}
