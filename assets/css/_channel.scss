@@ -27,6 +27,7 @@
 	}
 }
 
+/* ==== channel cards ===== */
 .row-channel-cards {
 	margin: variables.$def-margin;
 	@media screen and (min-width: breakpoints.$md) {
@@ -42,6 +43,7 @@
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
+	/* === whole article clickable ====*/
 	.article-clickable {
 		color: variables.$navy-blue;
 		&:hover {
