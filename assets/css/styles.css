@@ -351,11 +351,28 @@ span {
 }
 
 /* =============== channel styles ============= */
+.channel-banner > img {
+  min-height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .channel-section {
   padding: 1.5rem 1.25rem;
 }
+.channel-section > h1,
+.channel-section h2,
+.channel-section h3 {
+  color: #ff6168;
+}
+.channel-section > h1 {
+  text-align: left;
+}
 .channel-section > h2 {
   margin-bottom: 2rem;
+}
+.channel-section > p {
+  max-width: 65ch;
 }
 @media screen and (min-width: 64rem) {
   .channel-section {
@@ -364,15 +381,35 @@ span {
   }
 }
 
+/* ==== channel cards ===== */
 .row-channel-cards {
   margin: 0 auto;
+  /* === whole article clickable ====*/
 }
 @media screen and (min-width: 48rem) {
   .row-channel-cards {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    gap: 1.75rem;
+    gap: 1.5rem;
   }
+}
+@media screen and (min-width: 48rem) {
+  .row-channel-cards {
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 64rem) {
+  .row-channel-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.row-channel-cards .article-clickable {
+  color: #13344b;
+}
+.row-channel-cards .article-clickable:hover {
+  color: #ff6168;
+  text-decoration: underline;
 }
 .row-channel-cards .channel-card {
   margin: 1.5rem 0;
@@ -383,7 +420,7 @@ span {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  box-shadow: #ff6168 -5px 7px 12px -2px;
+  box-shadow: #ff6168 -5px 7px 15px -4px;
   border-radius: 10px 10px 10px 10px;
 }
 .row-channel-cards .channel-card:last-of-type {
@@ -391,7 +428,6 @@ span {
 }
 @media screen and (min-width: 48rem) {
   .row-channel-cards .channel-card {
-    flex: 1 1 25rem;
     margin: 0;
   }
 }
@@ -400,12 +436,6 @@ span {
 }
 .row-channel-cards .channel-title {
   margin-bottom: 1rem;
-}
-.row-channel-cards .channel-title > a {
-  color: #13344b;
-}
-.row-channel-cards .channel-title > a:hover {
-  color: #ff6168;
 }
 
 /* ===== text footer styles ==== */
