@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package autismtoday
+ * @package testingarea
  */
 get_header();
 ?>
@@ -19,9 +19,8 @@ $args = array(
   'order' => 'desc', // show by last descendant
 );
 $articles_query = new WP_Query($args);
+$articles_heading = get_field('featured_articles_heading')
 ?>
-
-
 
 <section class="featured-articles-section">
   <h1 class="articles-heading">
