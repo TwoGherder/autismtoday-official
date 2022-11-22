@@ -89,6 +89,12 @@ section a {
   text-decoration: none;
 }
 
+p,
+span,
+li {
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+}
+
 h4 {
   line-height: 3rem;
   font-size: clamp(1.125rem, 1.0938rem + 0.1563vw, 1.25rem);
