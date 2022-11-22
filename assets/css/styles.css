@@ -444,6 +444,140 @@ span {
   margin-bottom: 1rem;
 }
 
+/* ====== single channel blog styles ====== */
+.single-channel-content {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 1600px;
+  /* just for Michael Tanzer styling */
+  /* for Sky Canyon styling */
+}
+.single-channel-content > .single-channel-title {
+  position: absolute;
+  visibility: hidden;
+}
+.single-channel-content .content-column {
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .content-column {
+    display: grid;
+    grid-template-areas: "media text-content";
+    -moz-column-gap: 68px;
+         column-gap: 68px;
+    margin-bottom: 36px;
+  }
+}
+.single-channel-content .content-column > div:first-of-type {
+  grid-area: media;
+}
+.single-channel-content .content-column > div:last-of-type {
+  grid-area: text-content;
+}
+.single-channel-content a:hover,
+.single-channel-content h2 {
+  color: #ff6168;
+}
+.single-channel-content a {
+  text-decoration: none;
+}
+.single-channel-content a:hover {
+  text-decoration: underline;
+}
+.single-channel-content h3 {
+  color: #13344b;
+  text-transform: uppercase;
+}
+.single-channel-content p {
+  margin-bottom: 1.25rem;
+}
+.single-channel-content span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content img,
+.single-channel-content .video-channel {
+    min-width: 26.875rem;
+    max-width: 31.875rem;
+  }
+}
+.single-channel-content .channel-first-image,
+.single-channel-content .video-channel {
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .channel-first-image,
+.single-channel-content .video-channel {
+    margin-bottom: 0;
+  }
+}
+.single-channel-content .video-channels {
+  max-width: 56.25rem;
+}
+.single-channel-content .video-channels > div {
+  margin-bottom: 2rem;
+}
+.single-channel-content .video-channels > div:last-of-type {
+  margin-bottom: 0;
+}
+.single-channel-content .michael-media {
+  margin-top: 3.25rem;
+}
+.single-channel-content .michael-media > div {
+  margin-bottom: 2rem;
+}
+.single-channel-content .michael-media > div:last-of-type {
+  margin-bottom: 0;
+  display: inline-block;
+}
+.single-channel-content .michael-media > div .michaelism {
+  width: calc(15rem + 2vw);
+}
+.single-channel-content .michael-media > div .michael-podcast {
+  border-radius: 12px;
+  min-width: 16.25rem;
+  max-width: 42.5rem;
+}
+.single-channel-content .sky-canyon-content {
+  -moz-column-gap: 3.25rem;
+       column-gap: 3.25rem;
+}
+.single-channel-content .sky-img {
+  width: 16rem;
+  max-width: 20rem;
+}
+.single-channel-content .sky-podcast > a {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2.5rem;
+  background-color: #13344b;
+  color: white;
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+  font-weight: 500;
+}
+.single-channel-content .sky-podcast > a:hover {
+  text-decoration: underline;
+  background-color: #ff6168;
+}
+@media screen and (min-width: 20rem) {
+  .single-channel-content .sky-podcast > a {
+    width: calc(12rem + 3vw);
+    max-width: 13.75rem;
+  }
+}
+.single-channel-content .sky-podcast > iframe {
+  border-radius: 12px;
+  height: 12.5rem;
+  width: 29rem;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .sky-podcast > iframe {
+    width: 30.625rem;
+    height: 17.5rem;
+  }
+}
+
 /* ===== text footer styles ==== */
 .site-footer a {
   text-decoration: none;
