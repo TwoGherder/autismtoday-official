@@ -345,6 +345,30 @@ span {
   color: #ff6168;
 }
 
+/* === view more articles button styles ===*/
+.all-articles-btn {
+  text-align: center;
+}
+.all-articles-btn > a {
+  font-size: clamp(1rem, 0.9494rem + 0.2532vw, 1.25rem);
+  display: block;
+  color: #ffffff;
+  background-color: #13344b;
+  padding: 1rem;
+  border-radius: 3px;
+  margin: 3rem auto 0;
+  width: calc(8rem + 2vw);
+}
+.all-articles-btn > a:hover {
+  background-color: #ff6168;
+  text-decoration: underline;
+}
+@media screen and (min-width: 48rem) {
+  .all-articles-btn > a {
+    margin-bottom: 0;
+  }
+}
+
 /* === mix classes with different styles === */
 .title-pillar h3,
 .pillar-body a {

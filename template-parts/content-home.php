@@ -47,10 +47,10 @@ thumbnail sizing (settings in the admin - you can see the sizes) -->
 
 
     <section class="feature-articles-section">
-      <!-- <h2 class="services-heading">
-      <?php // the_field('services_heading');
-      ?>
-    </h2> -->
+      <h2 class="articles-heading">
+        <?php the_field('featured_articles_heading');
+        ?>
+      </h2>
 
       <!-- <p><?php // the_field('services_body_para');
               ?></p> --> -->
@@ -90,19 +90,19 @@ thumbnail sizing (settings in the admin - you can see the sizes) -->
 
       </div> <!-- end row-services -->
 
-      <!-- <div class="all-services-btn">
-    <?php
-    // $view_all_btn = get_field('view_all_services');
-    // if ($view_all_btn) :
-    //   $view_all_btn_title = $view_all_btn['title'];
-    //   $view_all_btn_url = $view_all_btn['url'];
-    ?>
-      <a href="<?php // print_r(esc_url($view_all_btn_url));
-                ?>"><?php // print_r(esc_html($view_all_btn_title));
-                    ?></a>
-    <?php // endif
-    ?>
-  </div> -->
+      <div class="all-articles-btn">
+        <?php
+        $view_all_btn = get_field('article_view_more_btn');
+        if ($view_all_btn) :
+          $view_all_btn_title = $view_all_btn['title'];
+          $view_all_btn_url = $view_all_btn['url'];
+        ?>
+          <a href="<?php print_r(esc_url($view_all_btn_url));
+                    ?>"><?php print_r(esc_html($view_all_btn_title));
+                        ?></a>
+        <?php endif
+        ?>
+      </div>
     </section>
 
   </main>
