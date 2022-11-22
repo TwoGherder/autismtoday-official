@@ -60,9 +60,6 @@
 			box-shadow: variables.$bright-red -5px 7px 15px -4px;
 			border-radius: 10px 10px 10px 10px;
 		}
-		&:last-of-type {
-			margin: 0;
-		}
 
 		@media screen and (min-width: breakpoints.$md) {
 			margin: 0;

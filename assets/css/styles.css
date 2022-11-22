@@ -429,9 +429,6 @@ span {
   box-shadow: #ff6168 -5px 7px 15px -4px;
   border-radius: 10px 10px 10px 10px;
 }
-.row-channel-cards .channel-card:last-of-type {
-  margin: 0;
-}
 @media screen and (min-width: 48rem) {
   .row-channel-cards .channel-card {
     margin: 0;
