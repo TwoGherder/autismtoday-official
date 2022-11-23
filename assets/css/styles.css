@@ -622,6 +622,7 @@ span {
 }
 .arts-section > p {
   max-width: 65ch;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 64rem) {
   .arts-section {
@@ -631,39 +632,43 @@ span {
 }
 
 /* ==== arts cards ===== */
-.row-arts-cards {
+.art-cat {
+  margin-bottom: 1.5rem;
+}
+.art-cat .row-arts-cards {
   margin: 0 auto;
   /* === whole article clickable ====*/
 }
 @media screen and (min-width: 48rem) {
-  .row-arts-cards {
+  .art-cat .row-arts-cards {
     display: grid;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
 }
 @media screen and (min-width: 48rem) {
-  .row-arts-cards {
+  .art-cat .row-arts-cards {
     margin: 0 auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (min-width: 64rem) {
-  .row-arts-cards {
+  .art-cat .row-arts-cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-.row-arts-cards .article-clickable {
+.art-cat .row-arts-cards .article-clickable {
   color: #13344b;
+  text-decoration: none;
 }
-.row-arts-cards .article-clickable:hover {
+.art-cat .row-arts-cards .article-clickable:hover {
   color: #12c0d8;
   text-decoration: underline;
 }
-.row-arts-cards .arts-card {
+.art-cat .row-arts-cards .arts-card {
   margin: 1.5rem 0;
 }
-.row-arts-cards .arts-card header > img {
+.art-cat .row-arts-cards .arts-card header > img {
   height: 18rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -673,14 +678,14 @@ span {
   border-radius: 10px 10px 10px 10px;
 }
 @media screen and (min-width: 48rem) {
-  .row-arts-cards .arts-card {
+  .art-cat .row-arts-cards .arts-card {
     margin: 0;
   }
 }
-.row-arts-cards .arts-body {
+.art-cat .row-arts-cards .arts-body {
   margin-top: 1.5rem;
 }
-.row-arts-cards .arts-title {
+.art-cat .row-arts-cards .arts-title {
   margin-bottom: 1rem;
 }
 
