@@ -271,8 +271,8 @@ get_header();
       ?>
     </div> <!-- end row-channel-cards -->
   </section> <!-- end channel-cat -->
+</div>
 
-
-  <?php
-  get_sidebar();
-  get_footer(); ?>
+<?php
+get_sidebar();
+get_footer(); ?>
