@@ -24,7 +24,7 @@ $articles_heading = get_field('featured_articles_heading')
 
 <section class="featured-articles-section">
   <h1 class="articles-heading">
-    <?php the_field('featured_articles_heading');
+    Featured Articles
     ?>
   </h1>
   <!-- card container  -->
