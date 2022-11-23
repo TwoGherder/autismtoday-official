@@ -13,6 +13,12 @@
       color: variables.$bright-red;
     }
   }
+  .post-thumbnail {
+    img {
+      width: 37.5rem;
+      height: auto;
+    }
+  }
 }
 
 .search-header-container {
