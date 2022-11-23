@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Template part for displaying custom post type: channel
+ * Template part for displaying custom post type: arts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package autismtoday
+ * @package testingarea
  */
 get_header();
 ?>
@@ -175,14 +175,8 @@ get_header();
       Photography
     </h2>
     <div class="row-arts-cards">
-
-      <!-- loop throughout channel content -->
       <!-- loop started -->
-
       <?php if ($arts_photography_query->have_posts()) : ?>
-        <?php // foreach ($channel_category as $category) {
-        ?>
-
         <?php while ($arts_photography_query->have_posts()) : $arts_photography_query->the_post(); ?>
           <!-- looped content -->
           <!-- card container  -->
@@ -252,9 +246,6 @@ get_header();
       <!-- loop started -->
 
       <?php if ($arts_movieani_query->have_posts()) : ?>
-        <?php // foreach ($channel_category as $category) {
-        ?>
-
         <?php while ($arts_movieani_query->have_posts()) : $arts_movieani_query->the_post(); ?>
           <!-- looped content -->
           <!-- card container  -->
@@ -293,10 +284,6 @@ get_header();
 
     </div> <!-- end row-arts-cards -->
   </section> <!-- end art-cat -->
-
-
-
-
   <?php
   get_sidebar();
   get_footer(); ?>
