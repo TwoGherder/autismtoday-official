@@ -10,11 +10,13 @@
     text-align: center;
     max-width: variables.$max-cont-width;
     margin: 0 auto;
+    color: variables.$alternate-color;
     h3 {
       width: 18.75rem;
       margin: 0 auto 1.5rem auto;
       font-family: variables.$content-font;
       font-size: clamp(1.125rem, 1.0313rem + 0.4688vw, 1.5rem);
+      color: variables.$alternate-color;
       @media screen and (min-width: breakpoints.$lg) {
         margin: 0;
       }
