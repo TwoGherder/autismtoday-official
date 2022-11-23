@@ -403,6 +403,7 @@ span {
 }
 .channel-section > p {
   max-width: 65ch;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 64rem) {
   .channel-section {
@@ -412,39 +413,42 @@ span {
 }
 
 /* ==== channel cards ===== */
-.row-channel-cards {
+.channel-cat {
+  margin-bottom: 3rem;
+}
+.channel-cat .row-channel-cards {
   margin: 0 auto;
   /* === whole article clickable ====*/
 }
 @media screen and (min-width: 48rem) {
-  .row-channel-cards {
+  .channel-cat .row-channel-cards {
     display: grid;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
 }
 @media screen and (min-width: 48rem) {
-  .row-channel-cards {
+  .channel-cat .row-channel-cards {
     margin: 0 auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (min-width: 64rem) {
-  .row-channel-cards {
+  .channel-cat .row-channel-cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-.row-channel-cards .article-clickable {
+.channel-cat .row-channel-cards .article-clickable {
   color: #13344b;
 }
-.row-channel-cards .article-clickable:hover {
+.channel-cat .row-channel-cards .article-clickable:hover {
   color: #ff6168;
   text-decoration: underline;
 }
-.row-channel-cards .channel-card {
+.channel-cat .row-channel-cards .channel-card {
   margin: 1.5rem 0;
 }
-.row-channel-cards .channel-card header > img {
+.channel-cat .row-channel-cards .channel-card header > img {
   height: 18rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -454,14 +458,14 @@ span {
   border-radius: 10px 10px 10px 10px;
 }
 @media screen and (min-width: 48rem) {
-  .row-channel-cards .channel-card {
+  .channel-cat .row-channel-cards .channel-card {
     margin: 0;
   }
 }
-.row-channel-cards .channel-body {
+.channel-cat .row-channel-cards .channel-body {
   margin-top: 1.5rem;
 }
-.row-channel-cards .channel-title {
+.channel-cat .row-channel-cards .channel-title {
   margin-bottom: 1rem;
 }
 
