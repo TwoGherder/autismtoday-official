@@ -19,3 +19,9 @@ p,
 li {
   font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
 }
+/*  global rules for whole page */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
