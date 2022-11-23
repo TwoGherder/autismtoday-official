@@ -957,4 +957,16 @@ nav .main-menu .donate-button-container a:hover {
 .error-404-bg .error-404-container .error-404-content .error-404-home-container .error-404-home:hover {
   background-color: #12c0d8;
 }
+
+.archive-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+.archive-container .entry-header h2 a {
+  color: #ff6168;
+}
+.archive-container .entry-meta a {
+  color: #12c0d8;
+}
 /*# sourceMappingURL=styles.css.map */

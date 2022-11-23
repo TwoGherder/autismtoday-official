@@ -1,0 +1,20 @@
+@use "variables";
+@use "breakpoints";
+
+.archive-container {
+  max-width: variables.$max-cont-width;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  .entry-header {
+    h2 {
+      a {
+        color: variables.$bright-red;
+      }
+    }
+  }
+  .entry-meta {
+    a {
+      color: variables.$bright-blue;
+    }
+  }
+}

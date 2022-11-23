@@ -21,9 +21,9 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
+				<p>Date: <?php the_time('F j, Y'); ?></p>
 				<?php
-				autismtoday_posted_on();
-				autismtoday_posted_by();
+					autismtoday_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -57,7 +57,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer">
 		<?php autismtoday_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer> -->
 </article><!-- #post-<?php the_ID(); ?> -->
