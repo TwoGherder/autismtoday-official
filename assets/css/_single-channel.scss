@@ -73,6 +73,20 @@
 		}
 	}
 
+	/* for emotiplay videos only */
+	.emotiplay-videos {
+		@media screen and (min-width: breakpoints.$lg) {
+			display: flex;
+			gap: 1.25rem;
+			flex-flow: row wrap;
+			max-width: max-content;
+			margin-bottom: 2rem;
+			> div {
+				flex: 1 1 25rem;
+			}
+		}
+	}
+
 	/* just for Michael Tanzer styling */
 	.michael-media {
 		margin-top: 3.25rem;

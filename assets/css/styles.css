@@ -474,6 +474,7 @@ span {
   margin: 0 auto;
   padding: 32px;
   max-width: 1600px;
+  /* for emotiplay videos only */
   /* just for Michael Tanzer styling */
   /* for Sky Canyon styling */
 }
@@ -545,6 +546,20 @@ span {
 }
 .single-channel-content .video-channels > div:last-of-type {
   margin-bottom: 0;
+}
+@media screen and (min-width: 64rem) {
+  .single-channel-content .emotiplay-videos {
+    display: flex;
+    gap: 1.25rem;
+    flex-flow: row wrap;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin-bottom: 2rem;
+  }
+  .single-channel-content .emotiplay-videos > div {
+    flex: 1 1 25rem;
+  }
 }
 .single-channel-content .michael-media {
   margin-top: 3.25rem;
