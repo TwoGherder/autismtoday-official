@@ -772,6 +772,95 @@ span {
   margin-bottom: 1rem;
 }
 
+/* =============== channel styles ============= */
+.channel-banner > img {
+  min-height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.channel-section {
+  padding: 1.5rem 1.25rem;
+}
+.channel-section > h1,
+.channel-section h2,
+.channel-section h3 {
+  color: #ff6168;
+}
+.channel-section > h1 {
+  text-align: left;
+}
+.channel-section > h2 {
+  margin-bottom: 2rem;
+}
+.channel-section > p {
+  max-width: 65ch;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 64rem) {
+  .channel-section {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+/* ==== channel cards ===== */
+.channel-cat {
+  margin-bottom: 3rem;
+}
+.channel-cat .row-channel-cards {
+  margin: 0 auto;
+  /* === whole article clickable ====*/
+}
+@media screen and (min-width: 48rem) {
+  .channel-cat .row-channel-cards {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .channel-cat .row-channel-cards {
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 64rem) {
+  .channel-cat .row-channel-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.channel-cat .row-channel-cards .article-clickable {
+  color: #13344a;
+}
+.channel-cat .row-channel-cards .article-clickable:hover {
+  color: #ff6168;
+  text-decoration: underline;
+}
+.channel-cat .row-channel-cards .channel-card {
+  margin: 1.5rem 0;
+}
+.channel-cat .row-channel-cards .channel-card header > img {
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: #ff6168 -5px 7px 15px -4px;
+  border-radius: 10px 10px 10px 10px;
+}
+@media screen and (min-width: 48rem) {
+  .channel-cat .row-channel-cards .channel-card {
+    margin: 0;
+  }
+}
+.channel-cat .row-channel-cards .channel-body {
+  margin-top: 1.5rem;
+}
+.channel-cat .row-channel-cards .channel-title {
+  margin-bottom: 1rem;
+}
+
 /* ====== single arts blog styles ====== */
 .single-arts-content {
   margin: 0 auto;
