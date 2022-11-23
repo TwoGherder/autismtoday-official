@@ -83,35 +83,6 @@ select {
   visibility: hidden;
 }
 
-h1 {
-  margin-top: 1.5rem;
-  text-align: center;
-  line-height: 3rem;
-  font-size: clamp(1.75rem, 1.625rem + 0.625vw, 2.25rem);
-}
-
-h2 {
-  line-height: 3rem;
-  font-size: clamp(1.5rem, 1.4375rem + 0.3125vw, 1.75rem);
-}
-
-h3 {
-  line-height: 3rem;
-  font-size: clamp(1.125rem, 1.0313rem + 0.4688vw, 1.5rem);
-}
-
-p,
-li {
-  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
-}
-
-/*  global rules for whole page */
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-}
-
 h1,
 h2,
 h3,
@@ -362,6 +333,63 @@ nav .main-menu .donate-button-container a:hover {
   background-color: #12c0d8;
 }
 
+h1 {
+  margin-top: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  font-size: clamp(1.75rem, 1.625rem + 0.625vw, 2.25rem);
+}
+
+h2 {
+  line-height: 3rem;
+  font-size: clamp(1.5rem, 1.4375rem + 0.3125vw, 1.75rem);
+}
+
+h3 {
+  line-height: 3rem;
+  font-size: clamp(1.125rem, 1.0313rem + 0.4688vw, 1.5rem);
+}
+
+p,
+li {
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+}
+
+/*  global rules for whole page */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section a {
+  text-decoration: none;
+}
+
+p,
+span,
+li {
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+}
+
+h4 {
+  line-height: 3rem;
+  font-size: clamp(1.125rem, 1.0938rem + 0.1563vw, 1.25rem);
+}
+
+span {
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+}
+
+p,
+span {
+  line-height: 1.5;
+}
+
 /* =============== 3 main pillar cards styles ============= */
 /* === 3 main section === */
 .main-pillars {
@@ -487,6 +515,395 @@ nav .main-menu .donate-button-container a:hover {
 .title-pillar h3,
 .pillar-body a {
   text-transform: uppercase;
+}
+
+/* ======== single blog entry styles ============== */
+.wp-image-108 {
+  float: left;
+  margin-right: 1.25rem;
+}
+
+.wp-image-115 {
+  margin-bottom: 1.25rem;
+}
+
+.quote {
+  font-style: italic;
+  margin: 1rem 0 1.5rem;
+}
+
+.service-dog-li:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
+.service-dog-li::before {
+  content: "";
+  display: inline-block;
+  border-left: 1px solid #13344a;
+  width: 12px;
+  background-color: #13344a;
+  height: 3px;
+  position: relative;
+  bottom: 3px;
+  margin-right: 0.25rem;
+}
+
+/* ====== single channel blog styles ====== */
+.single-channel-content {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 1600px;
+  /* just for Michael Tanzer styling */
+  /* for Sky Canyon styling */
+}
+.single-channel-content > .single-channel-title {
+  position: absolute;
+  visibility: hidden;
+}
+.single-channel-content .content-column {
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .content-column {
+    display: grid;
+    grid-template-areas: "media text-content";
+    -moz-column-gap: 68px;
+         column-gap: 68px;
+    margin-bottom: 36px;
+  }
+}
+.single-channel-content .content-column > div:first-of-type {
+  grid-area: media;
+}
+.single-channel-content .content-column > div:last-of-type {
+  grid-area: text-content;
+}
+.single-channel-content a:hover,
+.single-channel-content h2 {
+  color: #ff6168;
+}
+.single-channel-content a {
+  text-decoration: none;
+}
+.single-channel-content a:hover {
+  text-decoration: underline;
+}
+.single-channel-content h3 {
+  color: #13344a;
+  text-transform: uppercase;
+}
+.single-channel-content p {
+  margin-bottom: 1.25rem;
+}
+.single-channel-content span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content img,
+.single-channel-content .video-channel {
+    min-width: 26.875rem;
+    max-width: 31.875rem;
+  }
+}
+.single-channel-content .channel-first-image,
+.single-channel-content .video-channel {
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .channel-first-image,
+.single-channel-content .video-channel {
+    margin-bottom: 0;
+  }
+}
+.single-channel-content .video-channels {
+  max-width: 56.25rem;
+}
+.single-channel-content .video-channels > div {
+  margin-bottom: 2rem;
+}
+.single-channel-content .video-channels > div:last-of-type {
+  margin-bottom: 0;
+}
+.single-channel-content .michael-media {
+  margin-top: 3.25rem;
+}
+.single-channel-content .michael-media > div {
+  margin-bottom: 2rem;
+}
+.single-channel-content .michael-media > div:last-of-type {
+  margin-bottom: 0;
+  display: inline-block;
+}
+.single-channel-content .michael-media > div .michaelism {
+  width: calc(15rem + 2vw);
+}
+.single-channel-content .michael-media > div .michael-podcast {
+  border-radius: 12px;
+  min-width: 16.25rem;
+  max-width: 42.5rem;
+}
+.single-channel-content .sky-canyon-content {
+  -moz-column-gap: 3.25rem;
+       column-gap: 3.25rem;
+}
+.single-channel-content .sky-img {
+  width: 16rem;
+  max-width: 20rem;
+}
+.single-channel-content .sky-podcast > a {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2.5rem;
+  background-color: #13344a;
+  color: white;
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+  font-weight: 500;
+}
+.single-channel-content .sky-podcast > a:hover {
+  text-decoration: underline;
+  background-color: #ff6168;
+}
+@media screen and (min-width: 20rem) {
+  .single-channel-content .sky-podcast > a {
+    width: calc(12rem + 3vw);
+    max-width: 13.75rem;
+  }
+}
+.single-channel-content .sky-podcast > iframe {
+  border-radius: 12px;
+  height: 12.5rem;
+  width: 29rem;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .sky-podcast > iframe {
+    width: 30.625rem;
+    height: 17.5rem;
+  }
+}
+
+/* =============== arts styles ============= */
+.arts-banner > img {
+  min-height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.arts-section {
+  padding: 1.5rem 1.25rem;
+}
+.arts-section > h1,
+.arts-section h2,
+.arts-section h3 {
+  color: #12c0d8;
+}
+.arts-section > h1 {
+  text-align: left;
+}
+.arts-section > h2 {
+  margin-bottom: 2rem;
+}
+.arts-section > p {
+  max-width: 65ch;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 64rem) {
+  .arts-section {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+/* ==== arts cards ===== */
+.art-cat {
+  margin-bottom: 1.5rem;
+}
+.art-cat .row-arts-cards {
+  margin: 0 auto;
+  /* === whole article clickable ====*/
+}
+@media screen and (min-width: 48rem) {
+  .art-cat .row-arts-cards {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .art-cat .row-arts-cards {
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 64rem) {
+  .art-cat .row-arts-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.art-cat .row-arts-cards .article-clickable {
+  color: #13344a;
+  text-decoration: none;
+}
+.art-cat .row-arts-cards .article-clickable:hover {
+  color: #12c0d8;
+  text-decoration: underline;
+}
+.art-cat .row-arts-cards .arts-card {
+  margin: 1.5rem 0;
+}
+.art-cat .row-arts-cards .arts-card header > img {
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: #12c0d8 -5px 7px 15px -4px;
+  border-radius: 10px 10px 10px 10px;
+}
+@media screen and (min-width: 48rem) {
+  .art-cat .row-arts-cards .arts-card {
+    margin: 0;
+  }
+}
+.art-cat .row-arts-cards .arts-body {
+  margin-top: 1.5rem;
+}
+.art-cat .row-arts-cards .arts-title {
+  margin-bottom: 1rem;
+}
+
+/* ====== single arts blog styles ====== */
+.single-arts-content {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 1600px;
+  /* just for Michael Tanzer styling */
+  /* for Sky Canyon styling */
+}
+.single-arts-content > .single-arts-title {
+  position: absolute;
+  visibility: hidden;
+}
+.single-arts-content .content-column {
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content .content-column {
+    display: grid;
+    grid-template-areas: "media text-content";
+    -moz-column-gap: 68px;
+         column-gap: 68px;
+    margin-bottom: 36px;
+  }
+}
+.single-arts-content .content-column > div:first-of-type {
+  grid-area: media;
+}
+.single-arts-content .content-column > div:last-of-type {
+  grid-area: text-content;
+}
+.single-arts-content a:hover,
+.single-arts-content h2 {
+  color: #12c0d8;
+}
+.single-arts-content a {
+  text-decoration: none;
+}
+.single-arts-content a:hover {
+  text-decoration: underline;
+}
+.single-arts-content h3 {
+  color: #13344a;
+  text-transform: uppercase;
+}
+.single-arts-content p {
+  margin-bottom: 1.25rem;
+}
+.single-arts-content span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content img,
+.single-arts-content .video-channel {
+    min-width: 26.875rem;
+    max-width: 31.875rem;
+  }
+}
+.single-arts-content .channel-first-image,
+.single-arts-content .video-channel {
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content .channel-first-image,
+.single-arts-content .video-channel {
+    margin-bottom: 0;
+  }
+}
+.single-arts-content .video-channels {
+  max-width: 56.25rem;
+}
+.single-arts-content .video-channels > div {
+  margin-bottom: 2rem;
+}
+.single-arts-content .video-channels > div:last-of-type {
+  margin-bottom: 0;
+}
+.single-arts-content .michael-media {
+  margin-top: 3.25rem;
+}
+.single-arts-content .michael-media > div {
+  margin-bottom: 2rem;
+}
+.single-arts-content .michael-media > div:last-of-type {
+  margin-bottom: 0;
+  display: inline-block;
+}
+.single-arts-content .michael-media > div .michaelism {
+  width: calc(15rem + 2vw);
+}
+.single-arts-content .michael-media > div .michael-podcast {
+  border-radius: 12px;
+  min-width: 16.25rem;
+  max-width: 42.5rem;
+}
+.single-arts-content .sky-canyon-content {
+  -moz-column-gap: 3.25rem;
+       column-gap: 3.25rem;
+}
+.single-arts-content .sky-img {
+  width: 16rem;
+  max-width: 20rem;
+}
+.single-arts-content .sky-podcast > a {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2.5rem;
+  background-color: #13344a;
+  color: white;
+  font-size: clamp(1rem, 0.9688rem + 0.1563vw, 1.125rem);
+  font-weight: 500;
+}
+.single-arts-content .sky-podcast > a:hover {
+  text-decoration: underline;
+  background-color: #12c0d8;
+}
+@media screen and (min-width: 20rem) {
+  .single-arts-content .sky-podcast > a {
+    width: calc(12rem + 3vw);
+    max-width: 13.75rem;
+  }
+}
+.single-arts-content .sky-podcast > iframe {
+  border-radius: 12px;
+  height: 12.5rem;
+  width: 29rem;
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content .sky-podcast > iframe {
+    width: 30.625rem;
+    height: 17.5rem;
+  }
 }
 
 .led-container {
@@ -835,12 +1252,14 @@ nav .main-menu .donate-button-container a:hover {
   text-align: center;
   max-width: 1600px;
   margin: 0 auto;
+  color: #ffffff;
 }
 .newsletter-container .newsletter-content h3 {
   width: 18.75rem;
   margin: 0 auto 1.5rem auto;
   font-family: "Work Sans", sans-serif;
   font-size: clamp(1.125rem, 1.0313rem + 0.4688vw, 1.5rem);
+  color: #ffffff;
 }
 @media screen and (min-width: 64rem) {
   .newsletter-container .newsletter-content h3 {
@@ -1117,10 +1536,10 @@ nav .main-menu .donate-button-container a:hover {
   color: #12c0d8;
 }
 
-/* =============== footer styles below here =============== */
+/* =============== autismtoday footer styles below here =============== */
 .site-footer {
+  color: #ffffff;
   background-color: #13344a;
-  padding: 1.25rem 1.5rem;
 }
 .site-footer .widget-title {
   margin-bottom: 0.75rem;
@@ -1128,12 +1547,42 @@ nav .main-menu .donate-button-container a:hover {
 .site-footer ul {
   line-height: 1.75;
 }
+
+.autismtoday-footer {
+  padding: 1.25rem 1.5rem;
+  /* ============= links are all grid in screen ========= */
+}
+.autismtoday-footer h3 {
+  font-size: clamp(1.125rem, 0.4688rem + 1.25vw, 1.25rem);
+}
 @media screen and (min-width: 64rem) {
-  .site-footer {
+  .autismtoday-footer {
     padding: 5.25rem 10rem;
   }
 }
+.autismtoday-footer > .grid-row {
+  margin: 0 auto;
+  display: grid;
+}
+@media screen and (min-width: 48rem) {
+  .autismtoday-footer > .grid-row {
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, auto));
+  }
+}
+@media screen and (min-width: 64rem) {
+  .autismtoday-footer > .grid-row {
+    max-width: 1600px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 80rem) {
+  .autismtoday-footer > .grid-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 
+/* =========== top footer ========== */
 .top-footer {
   margin-bottom: 3.25rem;
 }
@@ -1151,24 +1600,12 @@ nav .main-menu .donate-button-container a:hover {
   }
 }
 
+/* =========== mid footer ========== */
 .mid-footer {
   margin-bottom: 2.85rem;
 }
-
-/* ========== links are all flex in screen ============== */
-@media screen and (min-width: 880px) {
-  .site-footer > .flex-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
-  }
-}
-@media screen and (min-width: 64rem) {
-  .site-footer > .flex-row {
-    max-width: 1600px;
-  }
+.mid-footer a {
+  font-size: clamp(1rem, 0.6591rem + 0.9091vw, 1.125rem);
 }
 
 /* =========== bottom footer ========== */
@@ -1178,7 +1615,7 @@ nav .main-menu .donate-button-container a:hover {
   padding: 1rem 0;
 }
 
-/* ==== social media ==== */
+/* =========== social media ========== */
 .soc-med {
   text-align: center;
 }
@@ -1189,7 +1626,6 @@ nav .main-menu .donate-button-container a:hover {
   -moz-column-gap: 0.75rem;
        column-gap: 0.75rem;
 }
-
 .soc-med > ul svg {
   width: 2rem;
   height: 2rem;
@@ -1199,9 +1635,14 @@ nav .main-menu .donate-button-container a:hover {
   height: 3rem;
 }
 
-@media screen and (min-width: 64rem) {
-  .copyright p {
-    font-size: 0.875rem;
-  }
+/* ======= copyright ======== */
+.copyright p {
+  font-size: clamp(0.875rem, 0.6528rem + 1.1111vw, 1rem);
+}
+
+/* ======= for hiding the title not SR ===== */
+.mid-col-three h3,
+.mid-col-four h3 {
+  visibility: hidden;
 }
 /*# sourceMappingURL=styles.css.map */
