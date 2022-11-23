@@ -284,6 +284,7 @@ get_header();
 
     </div> <!-- end row-arts-cards -->
   </section> <!-- end art-cat -->
+</div>
   <?php
   get_sidebar();
   get_footer(); ?>
