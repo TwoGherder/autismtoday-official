@@ -110,34 +110,142 @@ span {
 }
 
 /* ======== single blog entry styles ============== */
-.wp-image-108 {
-  float: left;
-  margin-right: 1.25rem;
+.single-featart-content {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 100rem;
+  /* for the flex of disabled wheelchair */
+  /* for the flex of mobile */
+  /* ==== quotes must be on short === */
 }
-
-.wp-image-115 {
-  margin-bottom: 1.25rem;
+.single-featart-content > .single-featart-title {
+  position: absolute;
+  visibility: hidden;
 }
-
-.quote {
+.single-featart-content .content-column,
+.single-featart-content .content-straight {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .content-column {
+    display: grid;
+    grid-template-areas: "media text-content";
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+.single-featart-content .content-column > div:first-of-type {
+  grid-area: media;
+}
+.single-featart-content .content-column > div:last-of-type {
+  grid-area: text-content;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .content-column-flex {
+    display: flex;
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    align-items: stretch;
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .content-column-flex-2 {
+    display: flex;
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    align-items: stretch;
+  }
+}
+.single-featart-content .quote {
+  margin: 1rem 0 0;
   font-style: italic;
-  margin: 1rem 0 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .quote {
+    min-width: 46ch;
+    max-width: 63ch;
+  }
+}
+.single-featart-content a:hover,
+.single-featart-content h2 {
+  color: #6cd898;
+}
+.single-featart-content a {
+  text-decoration: none;
+}
+.single-featart-content a:hover {
+  text-decoration: underline;
+}
+.single-featart-content h3 {
+  color: #13344b;
+  text-transform: uppercase;
+}
+.single-featart-content p {
+  margin-bottom: 20px;
+}
+.single-featart-content span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content img {
+    min-width: 430px;
+    max-width: 510px;
+  }
 }
 
+/* ==== service dog list style ==== */
 .service-dog-li:last-of-type {
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
-
 .service-dog-li::before {
   content: "";
   display: inline-block;
-  border-left: 1px solid #13344a;
-  width: 12px;
+  border-left: 0.0625rem solid #13344a;
+  width: 0.75rem;
   background-color: #13344a;
-  height: 3px;
+  height: 0.1875rem;
   position: relative;
-  bottom: 3px;
-  margin-right: 0.25rem;
+  bottom: 0.1875rem;
+  margin-right: 4px;
+}
+
+/* ======== featured articles single post pagination styles ===== */
+.single-featart-navigation {
+  margin-top: 2.25rem;
+}
+.single-featart-navigation a {
+  background-color: #13344b;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  display: block;
+}
+.single-featart-navigation a:hover {
+  background-color: #6cd898;
+  text-decoration: underline;
+  color: #13344b;
+}
+.single-featart-navigation > .pagination > li {
+  margin-top: 1.5rem;
+}
+.single-featart-navigation > .pagination > li:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-navigation > .pagination > li {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-navigation > .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.75rem;
+  }
 }
 
 /* =============== 3 main pillar cards styles ============= */
