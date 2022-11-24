@@ -147,4 +147,34 @@
 			}
 		}
 	}
+
+	/* ======== channel single post pagination styles ===== */
+	.single-channel-navigation {
+		a {
+			background-color: variables.$bright-red;
+			color: variables.$alternate-color;
+			padding: 0.5rem;
+			border-radius: 0.3125rem;
+
+			display: block;
+			&:hover {
+				background-color: variables.$navy-blue;
+				text-decoration: underline;
+			}
+		}
+		> .pagination {
+			> li {
+				margin: 2.5rem 0;
+				@media screen and (min-width: breakpoints.$md) {
+					margin: 0;
+				}
+			}
+			@media screen and (min-width: breakpoints.$md) {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				gap: 1.75rem;
+			}
+		}
+	}
 }

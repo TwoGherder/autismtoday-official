@@ -477,6 +477,7 @@ span {
   /* for emotiplay videos only */
   /* just for Michael Tanzer styling */
   /* for Sky Canyon styling */
+  /* ======== channel single post pagination styles ===== */
 }
 .single-channel-content > .single-channel-title {
   position: absolute;
@@ -618,6 +619,33 @@ span {
     height: 17.5rem;
   }
 }
+.single-channel-content .single-channel-navigation a {
+  background-color: #ff6168;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  display: block;
+}
+.single-channel-content .single-channel-navigation a:hover {
+  background-color: #13344b;
+  text-decoration: underline;
+}
+.single-channel-content .single-channel-navigation > .pagination > li {
+  margin: 2.5rem 0;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .single-channel-navigation > .pagination > li {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .single-channel-navigation > .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.75rem;
+  }
+}
 
 /* =============== arts styles ============= */
 .arts-banner > img {
@@ -716,6 +744,7 @@ span {
   max-width: 1600px;
   /* just for Michael Tanzer styling */
   /* for Sky Canyon styling */
+  /* ======== arts single post pagination styles ===== */
 }
 .single-arts-content > .single-arts-title {
   position: absolute;
@@ -840,6 +869,33 @@ span {
   .single-arts-content .sky-podcast > iframe {
     width: 30.625rem;
     height: 17.5rem;
+  }
+}
+.single-arts-content .single-arts-navigation a {
+  background-color: #12c0d8;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  display: block;
+}
+.single-arts-content .single-arts-navigation a:hover {
+  background-color: #13344b;
+  text-decoration: underline;
+}
+.single-arts-content .single-arts-navigation > .pagination > li {
+  margin: 2.5rem 0;
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content .single-arts-navigation > .pagination > li {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content .single-arts-navigation > .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.75rem;
   }
 }
 
