@@ -135,21 +135,25 @@
 
 	/* ======== arts single post pagination styles ===== */
 	.single-arts-navigation {
+		margin-top: 2.25rem;
 		a {
-			background-color: variables.$bright-blue;
+			background-color: variables.$navy-blue;
 			color: variables.$alternate-color;
 			padding: 0.5rem;
 			border-radius: 0.3125rem;
 
 			display: block;
 			&:hover {
-				background-color: variables.$navy-blue;
+				background-color: variables.$bright-blue;
 				text-decoration: underline;
 			}
 		}
 		> .pagination {
 			> li {
-				margin: 2.5rem 0;
+				margin-top: 1.5rem;
+				&:first-of-type {
+					margin-top: 0;
+				}
 				@media screen and (min-width: breakpoints.$md) {
 					margin: 0;
 				}
