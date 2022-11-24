@@ -222,3 +222,25 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// -- single blog pagination --
+function single_blog_post_pagination()
+{
+	global $wp_query;
+?>
+	<ul class="pagination post-pagination" role="navigation">
+		<li class="next-post">
+			<?php next_post_link(
+				'%link',
+				'&#9668; Newer posts: %title'
+			);  ?>
+		</li>
+		<li class="prev-post">
+			<?php previous_post_link(
+				'%link',
+				'Older posts: %title &#9658;'
+			); ?>
+		</li>
+	</ul>
+<?php
+}
