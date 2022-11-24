@@ -140,6 +140,7 @@
 			border-radius: 12px;
 			height: 12.5rem;
 			width: 29rem;
+			max-width: 100%;
 			@media screen and (min-width: breakpoints.$md) {
 				width: 30.625rem;
 				height: 17.5rem;

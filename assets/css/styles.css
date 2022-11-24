@@ -610,6 +610,7 @@ span {
   border-radius: 12px;
   height: 12.5rem;
   width: 29rem;
+  max-width: 100%;
 }
 @media screen and (min-width: 48rem) {
   .single-channel-content .sky-podcast > iframe {
