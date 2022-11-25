@@ -251,7 +251,7 @@ span {
 /* =============== 3 main pillar cards styles ============= */
 /* === 3 main section === */
 .main-pillars {
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem 1rem;
 }
 .main-pillars > h2 {
   margin-bottom: 2rem;
@@ -504,7 +504,7 @@ span {
 }
 
 .channel-section {
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem 1rem;
 }
 .channel-section > h1,
 .channel-section h2,
@@ -785,7 +785,7 @@ span {
 }
 
 .arts-section {
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem 1rem;
 }
 .arts-section > h1,
 .arts-section h2,
