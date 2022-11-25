@@ -443,6 +443,14 @@ span {
 .row-featured-articles .article-body {
   margin-top: 1.5rem;
 }
+.row-featured-articles .article-body > .article-excerpt {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .row-featured-articles .article-title {
   margin-bottom: 1rem;
 }

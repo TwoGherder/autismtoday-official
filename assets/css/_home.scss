@@ -171,6 +171,14 @@
 
 	.article-body {
 		margin-top: 1.5rem;
+		> .article-excerpt {
+			display: -webkit-box !important;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			white-space: normal;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 
 	.article-title {
