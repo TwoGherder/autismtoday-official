@@ -534,7 +534,6 @@ span {
 }
 .pillar-body a:hover {
   background-color: #ff6168;
-  text-decoration: underline;
 }
 @media screen and (min-width: 48rem) {
   .pillar-body a {
@@ -714,7 +713,6 @@ span {
 }
 .all-articles-btn > a:hover {
   background-color: #ff6168;
-  text-decoration: underline;
 }
 @media screen and (min-width: 48rem) {
   .all-articles-btn > a {
@@ -739,7 +737,7 @@ span {
 .single-featart-content .content-straight {
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 64rem) {
   .single-featart-content .content-column {
     display: grid;
     grid-template-areas: "media text-content";
@@ -839,7 +837,6 @@ span {
 }
 .single-featart-navigation a:hover {
   background-color: #6cd899;
-  text-decoration: underline;
   color: #13344a;
 }
 .single-featart-navigation > .pagination > li {
@@ -879,7 +876,7 @@ span {
 .single-channel-content .content-column {
   margin-bottom: 48px;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 64rem) {
   .single-channel-content .content-column {
     display: grid;
     grid-template-areas: "media text-content";
@@ -1025,7 +1022,6 @@ span {
 }
 .single-channel-content .single-channel-navigation a:hover {
   background-color: #ff6168;
-  text-decoration: underline;
 }
 .single-channel-content .single-channel-navigation > .pagination > li {
   margin-top: 1.5rem;
@@ -1258,7 +1254,7 @@ span {
 .single-arts-content .content-column {
   margin-bottom: 48px;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 64rem) {
   .single-arts-content .content-column {
     display: grid;
     grid-template-areas: "media text-content";
@@ -1389,7 +1385,6 @@ span {
 }
 .single-arts-content .single-arts-navigation a:hover {
   background-color: #12c0d8;
-  text-decoration: underline;
 }
 .single-arts-content .single-arts-navigation > .pagination > li {
   margin-top: 1.5rem;

@@ -12,7 +12,7 @@
   }
   .content-column {
     margin-bottom: 48px;
-    @media screen and (min-width: breakpoints.$md) {
+    @media screen and (min-width: breakpoints.$lg) {
       display: grid;
       grid-template-areas: "media text-content";
       column-gap: 68px;
@@ -145,7 +145,6 @@
       display: block;
       &:hover {
         background-color: variables.$bright-blue;
-        text-decoration: underline;
       }
     }
     > .pagination {
