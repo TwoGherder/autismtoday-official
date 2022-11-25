@@ -65,5 +65,4 @@ $articles_heading = get_field('featured_articles_heading')
 
 </section>
 <?php
-get_sidebar();
 get_footer(); ?>

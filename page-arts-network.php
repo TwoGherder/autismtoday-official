@@ -286,5 +286,4 @@ get_header();
   </section> <!-- end art-cat -->
 </div>
 <?php
-get_sidebar();
 get_footer(); ?>
