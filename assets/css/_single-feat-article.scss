@@ -114,7 +114,7 @@
     color: variables.$alternate-color;
     padding: 0.5rem;
     border-radius: 0.3125rem;
-
+    transition: variables.$animation-all;
     display: block;
     &:hover {
       background-color: variables.$light-green;

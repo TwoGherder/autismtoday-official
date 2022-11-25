@@ -436,6 +436,10 @@ span {
   box-shadow: #7c8383 -5px 11px 12px 1px;
   max-width: 27rem;
   color: #13344a;
+  transition: all 0.3s ease-in-out;
+}
+.pillar-card:hover {
+  transform: translateY(-20px);
 }
 .pillar-card img {
   width: 100%;
@@ -525,6 +529,7 @@ span {
   padding: 1rem;
   border-radius: 3px;
   color: #ffffff;
+  transition: all 0.3s ease-in-out;
   margin-bottom: 1.5rem;
 }
 .pillar-body a:hover {
@@ -705,6 +710,7 @@ span {
   border-radius: 3px;
   margin: 3rem auto 0;
   width: calc(8rem + 2vw);
+  transition: all 0.3s ease-in-out;
 }
 .all-articles-btn > a:hover {
   background-color: #ff6168;
@@ -828,6 +834,7 @@ span {
   color: #ffffff;
   padding: 0.5rem;
   border-radius: 0.3125rem;
+  transition: all 0.3s ease-in-out;
   display: block;
 }
 .single-featart-navigation a:hover {
@@ -1013,6 +1020,7 @@ span {
   color: #ffffff;
   padding: 0.5rem;
   border-radius: 0.3125rem;
+  transition: all 0.3s ease-in-out;
   display: block;
 }
 .single-channel-content .single-channel-navigation a:hover {
@@ -1376,6 +1384,7 @@ span {
   color: #ffffff;
   padding: 0.5rem;
   border-radius: 0.3125rem;
+  transition: all 0.3s ease-in-out;
   display: block;
 }
 .single-arts-content .single-arts-navigation a:hover {
@@ -1414,7 +1423,6 @@ span {
   text-align: center;
   font-style: italic;
   padding: 3rem 0;
-  width: 56.25rem;
   margin: 0 auto;
 }
 .led-container .led-tips h2 {
