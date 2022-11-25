@@ -367,7 +367,7 @@ span {
   margin-bottom: 1.25rem;
 }
 .pillar-body .pillar-card-text {
-  /* for hovering, turn of the display and the overflow */
+  /* for hovering (if applied), turn of the display and the overflow */
   display: -webkit-box !important; /* to display the ellipsis, you need to put the display */
   -webkit-line-clamp: 3; /* number of multilines to be displayed in textbox */
   -webkit-box-orient: vertical; /* orientation */
