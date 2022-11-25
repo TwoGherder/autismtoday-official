@@ -573,6 +573,15 @@ span {
 .channel-cat .row-channel-cards .channel-body {
   margin-top: 1.5rem;
 }
+.channel-cat .row-channel-cards .channel-body > .channel-excerpt {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1.75rem;
+}
 .channel-cat .row-channel-cards .channel-title {
   margin-bottom: 1rem;
 }
