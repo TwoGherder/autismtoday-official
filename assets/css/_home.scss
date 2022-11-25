@@ -124,6 +124,7 @@
     color: variables.$alternate-color;
     transition: variables.$animation-all;
     margin-bottom: 1.5rem;
+    text-decoration: none;
     &:hover {
       background-color: variables.$bright-red;
     }

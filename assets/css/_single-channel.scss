@@ -158,6 +158,7 @@
       border-radius: 0.3125rem;
       transition: variables.$animation-all;
       display: block;
+      text-decoration: none;
       &:hover {
         background-color: variables.$bright-red;
       }

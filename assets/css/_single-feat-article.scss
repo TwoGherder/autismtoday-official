@@ -50,7 +50,7 @@
 
   /* ==== quotes must be on short === */
   .quote {
-    margin: 1rem 0 0;
+    margin: 1rem 0;
     font-style: italic;
     @media screen and (min-width: breakpoints.$md) {
       min-width: 46ch;
@@ -116,6 +116,7 @@
     border-radius: 0.3125rem;
     transition: variables.$animation-all;
     display: block;
+    text-decoration: none;
     &:hover {
       background-color: variables.$light-green;
       color: variables.$navy-blue;
