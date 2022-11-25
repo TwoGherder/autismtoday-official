@@ -109,6 +109,88 @@ span {
   line-height: 1.5;
 }
 
+/* =============== featured articles main page styles ============= */
+.featured-articles-section {
+  padding: 1.5rem 1rem;
+}
+.featured-articles-section > h2 {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 64rem) {
+  .featured-articles-section {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+.row-featured-articles {
+  margin: 0 auto;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  }
+}
+.row-featured-articles .articles-card {
+  margin: 1.5rem 0;
+}
+.row-featured-articles .articles-card header > img {
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: #13344b -5px 7px 12px -2px;
+  border-radius: 10px 10px 10px 10px;
+}
+.row-featured-articles .articles-card:last-of-type {
+  margin: 0;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles .articles-card {
+    flex: 1 1 25rem;
+    margin: 0;
+  }
+}
+.row-featured-articles .article-body {
+  margin-top: 1.5rem;
+}
+.row-featured-articles .article-title {
+  margin-bottom: 1rem;
+}
+.row-featured-articles .article-title > a {
+  color: #13344b;
+}
+.row-featured-articles .article-title > a:hover {
+  color: #ff6168;
+}
+
+/* === view more articles button styles ===*/
+.all-articles-btn {
+  text-align: center;
+}
+.all-articles-btn > a {
+  font-size: clamp(1rem, 0.9494rem + 0.2532vw, 1.25rem);
+  display: block;
+  color: #ffffff;
+  background-color: #13344b;
+  padding: 1rem;
+  border-radius: 3px;
+  margin: 3rem auto 0;
+  width: calc(8rem + 2vw);
+}
+.all-articles-btn > a:hover {
+  background-color: #ff6168;
+  text-decoration: underline;
+}
+@media screen and (min-width: 48rem) {
+  .all-articles-btn > a {
+    margin-bottom: 0;
+  }
+}
+
 /* ======== single blog entry styles ============== */
 .single-featart-content {
   margin: 0 auto;
