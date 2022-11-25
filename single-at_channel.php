@@ -17,6 +17,9 @@ get_header(); ?>
         <?php the_title(); ?>
       </h1>
       <?php the_content(); ?>
+      <div class="single-channel-navigation">
+        <?php single_blog_post_pagination(); ?>
+      </div>
     </div>
 
   <?php endwhile; ?>
