@@ -273,6 +273,5 @@ get_header();
   </section> <!-- end channel-cat -->
 </div>
 
-  <?php
-  get_sidebar();
-  get_footer(); ?>
+<?php
+get_footer(); ?>

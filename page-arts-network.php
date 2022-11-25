@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package testingarea
+ * @package autismtoday
  */
 get_header();
 ?>
@@ -285,6 +285,5 @@ get_header();
     </div> <!-- end row-arts-cards -->
   </section> <!-- end art-cat -->
 </div>
-  <?php
-  get_sidebar();
-  get_footer(); ?>
+<?php
+get_footer(); ?>

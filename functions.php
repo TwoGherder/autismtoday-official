@@ -222,3 +222,46 @@ if (defined('JETPACK__VERSION')) {
 
 remove_filter('the_content', 'wpautop');
 remove_filter('the_excerpt', 'wpautop');
+
+/* ==== paginations ====
+-- page pagination -- */
+function page_pagination()
+{
+	global $wp_query; // access all of our posts
+
+	$total_pages = $wp_query->max_num_pages; // max-num_pages is used to determine no. of pages
+	if ($total_pages > 1) {
+		$current_page = max(1, get_query_var('paged'));
+		echo paginate_links(array(
+			'base' => get_pagenum_link(1) . '%_%', // shows the intial page / starting point
+			'format' => '/page/%#%', // format the url
+			'current' => $current_page, // tells you page you are on
+			'total' => $total_pages, // calculates how many pages are in total
+			'prev_text' => '&#9668; Prev',
+			'next_text' => 'Next &#9658;'
+		));
+	}
+}
+
+
+// -- single blog pagination --
+function single_blog_post_pagination()
+{
+	global $wp_query;
+?>
+	<ul class="pagination post-pagination" role="navigation">
+		<li class="next-post">
+			<?php next_post_link(
+				'%link',
+				'&#9668; Newer posts: %title'
+			);  ?>
+		</li>
+		<li class="prev-post">
+			<?php previous_post_link(
+				'%link',
+				'Older posts: %title &#9658;'
+			); ?>
+		</li>
+	</ul>
+<?php
+}

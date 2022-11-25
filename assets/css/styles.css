@@ -393,7 +393,7 @@ span {
 /* =============== 3 main pillar cards styles ============= */
 /* === 3 main section === */
 .main-pillars {
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem 1rem;
 }
 .main-pillars > h2 {
   margin-bottom: 2rem;
@@ -414,11 +414,18 @@ span {
   .card-pillar-container {
     margin: 0 auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 51.25rem;
   }
 }
 @media screen and (min-width: 64rem) {
   .card-pillar-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 85rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .card-pillar-container {
+    max-width: 100rem;
   }
 }
 
@@ -427,6 +434,8 @@ span {
   border-radius: 10px;
   margin: 0 auto;
   box-shadow: #7c8383 -5px 11px 12px 1px;
+  max-width: 27rem;
+  color: #13344a;
 }
 .pillar-card img {
   width: 100%;
@@ -449,6 +458,16 @@ span {
 .pillar-card .title-pillar,
 .pillar-card > .pillar-body {
   padding: 0 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .pillar-card {
+    max-width: 25rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .pillar-card {
+    max-width: 100%;
+  }
 }
 
 /* === 3 main pillar header card === */
@@ -478,6 +497,10 @@ span {
   width: 4rem;
   height: 4rem;
 }
+.title-pillar h3 {
+  line-height: 2rem;
+  font-family: "Work Sans", sans-serif;
+}
 
 /* === 3 main pillar card body === */
 .pillar-body {
@@ -485,11 +508,16 @@ span {
   flex-direction: column;
   margin-bottom: 1.25rem;
 }
-.pillar-body p {
-  margin-bottom: 1.75rem;
-  height: 3rem;
+.pillar-body .pillar-card-text {
+  /* for hovering (if applied), turn of the display and the overflow */
+  display: -webkit-box !important; /* to display the ellipsis, you need to put the display */
+  -webkit-line-clamp: 3; /* number of multilines to be displayed in textbox */
+  -webkit-box-orient: vertical; /* orientation */
+  white-space: normal; /* set to normal, don't go on nowrap */
   overflow: hidden;
-  flex: 0 1 3rem;
+  text-overflow: ellipsis;
+  margin-bottom: 1.75rem;
+  flex: 0 1 5rem;
 }
 .pillar-body a {
   align-self: center;
@@ -497,7 +525,6 @@ span {
   padding: 1rem;
   border-radius: 3px;
   color: #ffffff;
-  text-decoration: none;
   margin-bottom: 1.5rem;
 }
 .pillar-body a:hover {
@@ -511,47 +538,327 @@ span {
   }
 }
 
+/* =============== featured articles styles ============= */
+.featured-articles-section {
+  padding: 1.5rem 1.25rem;
+}
+.featured-articles-section > h2 {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 64rem) {
+  .featured-articles-section {
+    margin: 0 auto;
+  }
+}
+
+.row-featured-articles {
+  margin: 0 auto;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  }
+}
+.row-featured-articles .articles-card {
+  margin: 1.5rem 0;
+}
+.row-featured-articles .articles-card header > img {
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: #13344a -5px 7px 12px -2px;
+  border-radius: 10px 10px 10px 10px;
+}
+.row-featured-articles .articles-card:last-of-type {
+  margin: 0;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles .articles-card {
+    flex: 1 1 25rem;
+    margin: 0;
+  }
+}
+.row-featured-articles .article-body {
+  margin-top: 1.5rem;
+}
+.row-featured-articles .article-body > .article-excerpt {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row-featured-articles .article-title {
+  margin-bottom: 1rem;
+}
+.row-featured-articles .article-title > a {
+  color: #13344a;
+}
+.row-featured-articles .article-title > a:hover {
+  color: #ff6168;
+}
+
+/* === view more articles button styles ===*/
+.all-articles-btn {
+  text-align: center;
+}
+.all-articles-btn > a {
+  font-size: clamp(1rem, 0.9494rem + 0.2532vw, 1.25rem);
+  display: block;
+  color: #ffffff;
+  background-color: #13344a;
+  padding: 1rem;
+  border-radius: 3px;
+  margin: 3rem auto 0;
+  width: calc(8rem + 2vw);
+}
+.all-articles-btn > a:hover {
+  background-color: #ff6168;
+  text-decoration: underline;
+}
+@media screen and (min-width: 48rem) {
+  .all-articles-btn > a {
+    margin-bottom: 0;
+  }
+}
+
 /* === mix classes with different styles === */
 .title-pillar h3,
 .pillar-body a {
   text-transform: uppercase;
 }
 
+.pillar-card-text,
+.article-excerpt {
+  font-size: clamp(1rem, 0.7778rem + 1.1111vw, 1.125rem);
+}
+
+/* =============== featured articles main page styles ============= */
+.featured-articles-section {
+  padding: 1.5rem 1rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.featured-articles-section > h2 {
+  margin-bottom: 2rem;
+}
+
+.row-featured-articles {
+  margin: 0 auto;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  }
+}
+.row-featured-articles .articles-card {
+  margin: 1.5rem 0;
+}
+.row-featured-articles .articles-card header > img {
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: #13344a -5px 7px 12px -2px;
+  border-radius: 10px 10px 10px 10px;
+}
+.row-featured-articles .articles-card:last-of-type {
+  margin: 0;
+}
+@media screen and (min-width: 48rem) {
+  .row-featured-articles .articles-card {
+    flex: 1 1 25rem;
+    margin: 0;
+  }
+}
+.row-featured-articles .article-body {
+  margin-top: 1.5rem;
+}
+.row-featured-articles .article-title {
+  margin-bottom: 1rem;
+}
+.row-featured-articles .article-title > a {
+  color: #13344a;
+}
+.row-featured-articles .article-title > a:hover {
+  color: #ff6168;
+}
+
+/* === view more articles button styles ===*/
+.all-articles-btn {
+  text-align: center;
+}
+.all-articles-btn > a {
+  font-size: clamp(1rem, 0.9494rem + 0.2532vw, 1.25rem);
+  display: block;
+  color: #ffffff;
+  background-color: #13344a;
+  padding: 1rem;
+  border-radius: 3px;
+  margin: 3rem auto 0;
+  width: calc(8rem + 2vw);
+}
+.all-articles-btn > a:hover {
+  background-color: #ff6168;
+  text-decoration: underline;
+}
+@media screen and (min-width: 48rem) {
+  .all-articles-btn > a {
+    margin-bottom: 0;
+  }
+}
+
 /* ======== single blog entry styles ============== */
-.wp-image-108 {
-  float: left;
-  margin-right: 1.25rem;
+.single-featart-content {
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  max-width: 1600px;
+  /* for the flex of disabled wheelchair */
+  /* for the flex of mobile */
+  /* ==== quotes must be on short === */
 }
-
-.wp-image-115 {
-  margin-bottom: 1.25rem;
+.single-featart-content > .single-featart-title {
+  position: absolute;
+  visibility: hidden;
 }
-
-.quote {
+.single-featart-content .content-column,
+.single-featart-content .content-straight {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .content-column {
+    display: grid;
+    grid-template-areas: "media text-content";
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+.single-featart-content .content-column > div:first-of-type {
+  grid-area: media;
+}
+.single-featart-content .content-column > div:last-of-type {
+  grid-area: text-content;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .content-column-flex {
+    display: flex;
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    align-items: stretch;
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .content-column-flex-2 {
+    display: flex;
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    align-items: stretch;
+  }
+}
+.single-featart-content .quote {
+  margin: 1rem 0 0;
   font-style: italic;
-  margin: 1rem 0 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content .quote {
+    min-width: 46ch;
+    max-width: 63ch;
+  }
+}
+.single-featart-content a:hover,
+.single-featart-content h2 {
+  color: #6cd899;
+}
+.single-featart-content a {
+  text-decoration: none;
+}
+.single-featart-content a:hover {
+  text-decoration: underline;
+}
+.single-featart-content h3 {
+  color: #13344a;
+  text-transform: uppercase;
+}
+.single-featart-content p {
+  margin-bottom: 20px;
+}
+.single-featart-content span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-content img {
+    min-width: 430px;
+    max-width: 510px;
+  }
 }
 
+/* ==== service dog list style ==== */
 .service-dog-li:last-of-type {
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
-
 .service-dog-li::before {
   content: "";
   display: inline-block;
-  border-left: 1px solid #13344a;
-  width: 12px;
+  border-left: 0.0625rem solid #13344a;
+  width: 0.75rem;
   background-color: #13344a;
-  height: 3px;
+  height: 0.1875rem;
   position: relative;
-  bottom: 3px;
-  margin-right: 0.25rem;
+  bottom: 0.1875rem;
+  margin-right: 4px;
+}
+
+/* ======== featured articles single post pagination styles ===== */
+.single-featart-navigation {
+  margin-top: 2.25rem;
+}
+.single-featart-navigation a {
+  background-color: #13344a;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  display: block;
+}
+.single-featart-navigation a:hover {
+  background-color: #6cd899;
+  text-decoration: underline;
+  color: #13344a;
+}
+.single-featart-navigation > .pagination > li {
+  margin-top: 1.5rem;
+}
+.single-featart-navigation > .pagination > li:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-navigation > .pagination > li {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-featart-navigation > .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.75rem;
+  }
 }
 
 /* ====== single channel blog styles ====== */
 .single-channel-content {
   margin: 0 auto;
-  padding: 32px;
+  padding: 1.5rem 1rem;
   max-width: 1600px;
   /* just for Michael Tanzer styling */
   /* for Sky Canyon styling */
@@ -561,15 +868,15 @@ span {
   visibility: hidden;
 }
 .single-channel-content .content-column {
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 48rem) {
   .single-channel-content .content-column {
     display: grid;
     grid-template-areas: "media text-content";
-    -moz-column-gap: 68px;
-         column-gap: 68px;
-    margin-bottom: 36px;
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    margin-bottom: 2.25rem;
   }
 }
 .single-channel-content .content-column > div:first-of-type {
@@ -608,7 +915,7 @@ span {
 }
 .single-channel-content .channel-first-image,
 .single-channel-content .video-channel {
-  margin-bottom: 28px;
+  margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 48rem) {
   .single-channel-content .channel-first-image,
@@ -639,7 +946,7 @@ span {
   width: calc(15rem + 2vw);
 }
 .single-channel-content .michael-media > div .michael-podcast {
-  border-radius: 12px;
+  border-radius: 0.75rem;
   min-width: 16.25rem;
   max-width: 42.5rem;
 }
@@ -670,7 +977,7 @@ span {
   }
 }
 .single-channel-content .sky-podcast > iframe {
-  border-radius: 12px;
+  border-radius: 0.75rem;
   height: 12.5rem;
   width: 29rem;
 }
@@ -767,6 +1074,14 @@ span {
 .art-cat .row-arts-cards .arts-body {
   margin-top: 1.5rem;
 }
+.art-cat .row-arts-cards .arts-body > .arts-excerpt {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .art-cat .row-arts-cards .arts-title {
   margin-bottom: 1rem;
 }
@@ -779,7 +1094,7 @@ span {
 }
 
 .channel-section {
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem 1rem;
 }
 .channel-section > h1,
 .channel-section h2,
@@ -856,6 +1171,14 @@ span {
 .channel-cat .row-channel-cards .channel-body {
   margin-top: 1.5rem;
 }
+.channel-cat .row-channel-cards .channel-body > .channel-excerpt {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .channel-cat .row-channel-cards .channel-title {
   margin-bottom: 1rem;
 }
@@ -863,7 +1186,7 @@ span {
 /* ====== single arts blog styles ====== */
 .single-arts-content {
   margin: 0 auto;
-  padding: 32px;
+  padding: 1.5rem 1rem;
   max-width: 1600px;
   /* just for Michael Tanzer styling */
   /* for Sky Canyon styling */
@@ -873,15 +1196,15 @@ span {
   visibility: hidden;
 }
 .single-arts-content .content-column {
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 48rem) {
   .single-arts-content .content-column {
     display: grid;
     grid-template-areas: "media text-content";
-    -moz-column-gap: 68px;
-         column-gap: 68px;
-    margin-bottom: 36px;
+    -moz-column-gap: 4.25rem;
+         column-gap: 4.25rem;
+    margin-bottom: 2.25rem;
   }
 }
 .single-arts-content .content-column > div:first-of-type {
@@ -920,7 +1243,7 @@ span {
 }
 .single-arts-content .channel-first-image,
 .single-arts-content .video-channel {
-  margin-bottom: 28px;
+  margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 48rem) {
   .single-arts-content .channel-first-image,
@@ -951,7 +1274,7 @@ span {
   width: calc(15rem + 2vw);
 }
 .single-arts-content .michael-media > div .michael-podcast {
-  border-radius: 12px;
+  border-radius: 0.75rem;
   min-width: 16.25rem;
   max-width: 42.5rem;
 }
@@ -1640,16 +1963,13 @@ span {
 }
 
 .autismtoday-footer {
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
   /* ============= links are all grid in screen ========= */
 }
 .autismtoday-footer h3 {
   font-size: clamp(1.125rem, 0.4688rem + 1.25vw, 1.25rem);
-}
-@media screen and (min-width: 64rem) {
-  .autismtoday-footer {
-    padding: 5.25rem 10rem;
-  }
 }
 .autismtoday-footer > .grid-row {
   margin: 0 auto;

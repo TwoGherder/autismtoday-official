@@ -4,19 +4,19 @@
 /* ====== single arts blog styles ====== */
 .single-arts-content {
   margin: variables.$def-margin;
-  padding: 32px;
-  max-width: 1600px;
+  padding: 1.5rem 1rem;
+  max-width: variables.$max-cont-width;
   > .single-arts-title {
     position: absolute;
     visibility: hidden;
   }
   .content-column {
-    margin-bottom: 48px;
+    margin-bottom: 3rem;
     @media screen and (min-width: breakpoints.$md) {
       display: grid;
       grid-template-areas: "media text-content";
-      column-gap: 68px;
-      margin-bottom: 36px;
+      column-gap: 4.25rem;
+      margin-bottom: 2.25rem;
     }
     > div:first-of-type {
       grid-area: media;
@@ -57,7 +57,7 @@
   }
   .channel-first-image,
   .video-channel {
-    margin-bottom: 28px;
+    margin-bottom: 1.5rem;
     @media screen and (min-width: breakpoints.$md) {
       margin-bottom: 0;
     }
@@ -86,7 +86,7 @@
         width: calc(15rem + 2vw);
       }
       .michael-podcast {
-        border-radius: 12px;
+        border-radius: 0.75rem;
         min-width: 16.25rem;
         max-width: 42.5rem;
       }
