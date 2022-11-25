@@ -719,8 +719,8 @@ span {
 /* ======== single blog entry styles ============== */
 .single-featart-content {
   margin: 0 auto;
-  padding: 1.5rem 1rem;
-  max-width: 1600px;
+  padding: 2rem;
+  max-width: 100rem;
   /* for the flex of disabled wheelchair */
   /* for the flex of mobile */
   /* ==== quotes must be on short === */
@@ -858,25 +858,27 @@ span {
 /* ====== single channel blog styles ====== */
 .single-channel-content {
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding: 32px;
   max-width: 1600px;
+  /* for emotiplay videos only */
   /* just for Michael Tanzer styling */
   /* for Sky Canyon styling */
+  /* ======== channel single post pagination styles ===== */
 }
 .single-channel-content > .single-channel-title {
   position: absolute;
   visibility: hidden;
 }
 .single-channel-content .content-column {
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
 }
 @media screen and (min-width: 48rem) {
   .single-channel-content .content-column {
     display: grid;
     grid-template-areas: "media text-content";
-    -moz-column-gap: 4.25rem;
-         column-gap: 4.25rem;
-    margin-bottom: 2.25rem;
+    -moz-column-gap: 68px;
+         column-gap: 68px;
+    margin-bottom: 36px;
   }
 }
 .single-channel-content .content-column > div:first-of-type {
@@ -915,7 +917,7 @@ span {
 }
 .single-channel-content .channel-first-image,
 .single-channel-content .video-channel {
-  margin-bottom: 1.5rem;
+  margin-bottom: 28px;
 }
 @media screen and (min-width: 48rem) {
   .single-channel-content .channel-first-image,
@@ -932,6 +934,20 @@ span {
 .single-channel-content .video-channels > div:last-of-type {
   margin-bottom: 0;
 }
+@media screen and (min-width: 64rem) {
+  .single-channel-content .emotiplay-videos {
+    display: flex;
+    gap: 1.25rem;
+    flex-flow: row wrap;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin-bottom: 2rem;
+  }
+  .single-channel-content .emotiplay-videos > div {
+    flex: 1 1 25rem;
+  }
+}
 .single-channel-content .michael-media {
   margin-top: 3.25rem;
 }
@@ -946,7 +962,7 @@ span {
   width: calc(15rem + 2vw);
 }
 .single-channel-content .michael-media > div .michael-podcast {
-  border-radius: 0.75rem;
+  border-radius: 12px;
   min-width: 16.25rem;
   max-width: 42.5rem;
 }
@@ -974,17 +990,52 @@ span {
 @media screen and (min-width: 20rem) {
   .single-channel-content .sky-podcast > a {
     width: calc(12rem + 3vw);
+    max-width: 13.75rem;
   }
 }
 .single-channel-content .sky-podcast > iframe {
-  border-radius: 0.75rem;
+  border-radius: 12px;
   height: 12.5rem;
   width: 29rem;
+  max-width: 100%;
 }
 @media screen and (min-width: 48rem) {
   .single-channel-content .sky-podcast > iframe {
     width: 30.625rem;
     height: 17.5rem;
+  }
+}
+.single-channel-content .single-channel-navigation {
+  margin-top: 2.25rem;
+}
+.single-channel-content .single-channel-navigation a {
+  background-color: #13344a;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  display: block;
+}
+.single-channel-content .single-channel-navigation a:hover {
+  background-color: #ff6168;
+  text-decoration: underline;
+}
+.single-channel-content .single-channel-navigation > .pagination > li {
+  margin-top: 1.5rem;
+}
+.single-channel-content .single-channel-navigation > .pagination > li:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .single-channel-navigation > .pagination > li {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-channel-content .single-channel-navigation > .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.75rem;
   }
 }
 
@@ -1186,25 +1237,26 @@ span {
 /* ====== single arts blog styles ====== */
 .single-arts-content {
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding: 32px;
   max-width: 1600px;
   /* just for Michael Tanzer styling */
   /* for Sky Canyon styling */
+  /* ======== arts single post pagination styles ===== */
 }
 .single-arts-content > .single-arts-title {
   position: absolute;
   visibility: hidden;
 }
 .single-arts-content .content-column {
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
 }
 @media screen and (min-width: 48rem) {
   .single-arts-content .content-column {
     display: grid;
     grid-template-areas: "media text-content";
-    -moz-column-gap: 4.25rem;
-         column-gap: 4.25rem;
-    margin-bottom: 2.25rem;
+    -moz-column-gap: 68px;
+         column-gap: 68px;
+    margin-bottom: 36px;
   }
 }
 .single-arts-content .content-column > div:first-of-type {
@@ -1243,7 +1295,7 @@ span {
 }
 .single-arts-content .channel-first-image,
 .single-arts-content .video-channel {
-  margin-bottom: 1.5rem;
+  margin-bottom: 28px;
 }
 @media screen and (min-width: 48rem) {
   .single-arts-content .channel-first-image,
@@ -1274,7 +1326,7 @@ span {
   width: calc(15rem + 2vw);
 }
 .single-arts-content .michael-media > div .michael-podcast {
-  border-radius: 0.75rem;
+  border-radius: 12px;
   min-width: 16.25rem;
   max-width: 42.5rem;
 }
@@ -1302,6 +1354,7 @@ span {
 @media screen and (min-width: 20rem) {
   .single-arts-content .sky-podcast > a {
     width: calc(12rem + 3vw);
+    max-width: 13.75rem;
   }
 }
 .single-arts-content .sky-podcast > iframe {
@@ -1313,6 +1366,39 @@ span {
   .single-arts-content .sky-podcast > iframe {
     width: 30.625rem;
     height: 17.5rem;
+  }
+}
+.single-arts-content .single-arts-navigation {
+  margin-top: 2.25rem;
+}
+.single-arts-content .single-arts-navigation a {
+  background-color: #13344a;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  display: block;
+}
+.single-arts-content .single-arts-navigation a:hover {
+  background-color: #12c0d8;
+  text-decoration: underline;
+}
+.single-arts-content .single-arts-navigation > .pagination > li {
+  margin-top: 1.5rem;
+}
+.single-arts-content .single-arts-navigation > .pagination > li:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content .single-arts-navigation > .pagination > li {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .single-arts-content .single-arts-navigation > .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.75rem;
   }
 }
 

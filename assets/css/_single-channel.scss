@@ -4,19 +4,19 @@
 /* ====== single channel blog styles ====== */
 .single-channel-content {
   margin: variables.$def-margin;
-  padding: 1.5rem 1rem;
-  max-width: variables.$max-cont-width;
+  padding: 32px;
+  max-width: 1600px;
   > .single-channel-title {
     position: absolute;
     visibility: hidden;
   }
   .content-column {
-    margin-bottom: 3rem;
+    margin-bottom: 48px;
     @media screen and (min-width: breakpoints.$md) {
       display: grid;
       grid-template-areas: "media text-content";
-      column-gap: 4.25rem;
-      margin-bottom: 2.25rem;
+      column-gap: 68px;
+      margin-bottom: 36px;
     }
     > div:first-of-type {
       grid-area: media;
@@ -57,7 +57,7 @@
   }
   .channel-first-image,
   .video-channel {
-    margin-bottom: 1.5rem;
+    margin-bottom: 28px;
     @media screen and (min-width: breakpoints.$md) {
       margin-bottom: 0;
     }
@@ -69,6 +69,20 @@
       margin-bottom: 2rem;
       &:last-of-type {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  /* for emotiplay videos only */
+  .emotiplay-videos {
+    @media screen and (min-width: breakpoints.$lg) {
+      display: flex;
+      gap: 1.25rem;
+      flex-flow: row wrap;
+      max-width: max-content;
+      margin-bottom: 2rem;
+      > div {
+        flex: 1 1 25rem;
       }
     }
   }
@@ -86,7 +100,7 @@
         width: calc(15rem + 2vw);
       }
       .michael-podcast {
-        border-radius: 0.75rem;
+        border-radius: 12px;
         min-width: 16.25rem;
         max-width: 42.5rem;
       }
@@ -119,15 +133,51 @@
 
       @media screen and (min-width: breakpoints.$sm) {
         width: calc(12rem + 3vw);
+        max-width: 13.75rem;
       }
     }
     > iframe {
-      border-radius: 0.75rem;
+      border-radius: 12px;
       height: 12.5rem;
       width: 29rem;
+      max-width: 100%;
       @media screen and (min-width: breakpoints.$md) {
         width: 30.625rem;
         height: 17.5rem;
+      }
+    }
+  }
+
+  /* ======== channel single post pagination styles ===== */
+  .single-channel-navigation {
+    margin-top: 2.25rem;
+    a {
+      background-color: variables.$navy-blue;
+      color: variables.$alternate-color;
+      padding: 0.5rem;
+      border-radius: 0.3125rem;
+
+      display: block;
+      &:hover {
+        background-color: variables.$bright-red;
+        text-decoration: underline;
+      }
+    }
+    > .pagination {
+      > li {
+        margin-top: 1.5rem;
+        &:first-of-type {
+          margin-top: 0;
+        }
+        @media screen and (min-width: breakpoints.$md) {
+          margin: 0;
+        }
+      }
+      @media screen and (min-width: breakpoints.$md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.75rem;
       }
     }
   }
