@@ -580,7 +580,6 @@ span {
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 1.75rem;
 }
 .channel-cat .row-channel-cards .channel-title {
   margin-bottom: 1rem;
