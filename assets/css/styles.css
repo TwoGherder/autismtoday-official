@@ -855,6 +855,14 @@ span {
 .art-cat .row-arts-cards .arts-body {
   margin-top: 1.5rem;
 }
+.art-cat .row-arts-cards .arts-body > .arts-excerpt {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .art-cat .row-arts-cards .arts-title {
   margin-bottom: 1rem;
 }
