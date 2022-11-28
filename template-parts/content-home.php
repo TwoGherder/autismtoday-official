@@ -58,21 +58,23 @@ thumbnail sizing (settings in the admin - you can see the sizes) -->
             <!-- loop started -->
             <?php while ($articles_query->have_posts()) : $articles_query->the_post(); ?>
               <!-- looped content -->
-              <article class="articles-card">
-                <!-- card header image -->
-                <header>
-                  <!-- feature image -->
-                  <?php echo get_the_post_thumbnail($post->ID, /*array(520, 320)*/); ?>
-                </header>
-                <div class="article-body">
-                  <div class="article-title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title('<h3>', '</h3>') ?></a>
-                  </div>
-                  <p class="article-excerpt">
-                    <?php the_excerpt() ?>
-                  </p>
-                </div> <!-- end .article-body -->
-              </article>
+              <a href="<?php the_permalink(); ?>" class="articles-card">
+                <article>
+                  <!-- card header image -->
+                  <header>
+                    <!-- feature image -->
+                    <?php echo get_the_post_thumbnail($post->ID, /*array(520, 320)*/); ?>
+                  </header>
+                  <div class="article-body">
+                    <div class="article-title">
+                      <h3><?php the_title() ?></h3>
+                    </div>
+                    <p class="article-excerpt">
+                      <?php the_excerpt() ?>
+                    </p>
+                  </div> <!-- end .article-body -->
+                </article>
+              </a>
               <!-- end .article-card -->
 
             <?php endwhile; ?>

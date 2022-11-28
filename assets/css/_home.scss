@@ -151,6 +151,11 @@
 	}
 	.articles-card {
 		margin: 1.5rem 0;
+		// heto lang na-add
+		color: variables.$navy-blue;
+		&:hover {
+			color: variables.$bright-red;
+		}
 		header > img {
 			height: 18rem;
 			object-fit: cover;

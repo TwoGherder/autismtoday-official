@@ -503,6 +503,10 @@ span {
 }
 .row-featured-articles .articles-card {
   margin: 1.5rem 0;
+  color: #13344b;
+}
+.row-featured-articles .articles-card:hover {
+  color: #ff6168;
 }
 .row-featured-articles .articles-card header > img {
   height: 18rem;
